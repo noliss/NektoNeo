@@ -1,0 +1,102 @@
+.payment {
+  display: flex;
+}
+
+.about {
+  display: flex;
+  // justify-content: center;
+  padding-top: 110px;
+  align-items: center;
+  flex-direction: column;
+  width: 580px;
+  height: 380px;
+  background: rgba(62, 62, 62, 0.07);
+  box-shadow: 0px 58.1116px 45.6591px -25.5968px rgba(29, 32, 33, 0.64);
+  backdrop-filter: blur(21.5px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 33.7033px;
+}
+
+.aboutLine {
+  margin-top: 78px;
+  margin-bottom: 24px;
+  width: 526px;
+  height: 1px;
+  background-color: #FFFFFF;
+}
+
+.aboutOptions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'RS';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 29px;
+  /* identical to box height, or 163% */
+
+  text-align: center;
+
+  color: #FFFFFF;
+}
+
+.aboutOptionsItem {
+  margin-right: 28px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.steps {
+  margin-left: 120px;
+  position: relative;
+}
+
+.stepsTitle {
+  font-family: 'RS';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 45.08px;
+  line-height: 46px;
+  /* identical to box height */
+  
+  text-transform: uppercase;
+  
+  color: #FFFFFF;
+}
+
+.stepsList {
+  margin-top: 55px;
+}
+
+.stepsListItem {
+  font-family: 'RS';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17.64px;
+  line-height: 25px;
+  margin-left: 50px;
+  margin-bottom: 36px;
+  /* or 144% */
+
+
+  color: #FFFFFF;
+  counter-increment: counter;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    content: counter(counter) '.';
+    font-family: 'RS';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 35.28px;
+    line-height: 35px;
+    text-align: center;
+
+    color: #FFFFFF;
+    margin-top: -3px;
+  }
+}

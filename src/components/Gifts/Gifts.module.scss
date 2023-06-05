@@ -1,0 +1,48 @@
+.gifts {
+  max-width: 918px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(180deg, rgba(22, 22, 22, 0.322) 0%, rgba(0, 0, 0, 0.441) 100%);
+  box-shadow: 0px 58.1116px 45.6591px -25.5968px rgba(29, 32, 33, 0.64);
+  backdrop-filter: blur(86px);
+  /* Note: backdrop-filter has minimal browser support */
+  margin-top: 44px;
+  padding: 53px 70px;
+  border-radius: 33.7033px;
+}
+
+.giftsListItem {
+  font-family: 'RS';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 156.79%;
+  /* or 22px */
+
+
+  color: #FFFFFF;
+  margin-bottom: 25px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.giftsDesc {
+  margin-top: 31px;
+  width: 462px;
+  max-width: 462px;
+  font-family: 'RS';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 156.79%;
+  /* or 22px */
+
+
+  color: #A9A9A9;
+}
+
+.giftsButton {
+  margin-top: 48px;
+}

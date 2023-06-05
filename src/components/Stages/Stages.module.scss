@@ -1,0 +1,49 @@
+.steps {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  height: 226px;
+}
+
+.step {
+  position: relative;
+  padding: 37px 10px;
+  max-width: 340px;
+  height: 154px;
+  max-height: 154px;
+  font-family: 'RS';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+  text-align: center;
+  color: #FFFFFF;
+  background: rgba(217, 217, 217, 0.01);
+  background-size: 146px 295px;
+  border: 1px solid #FFFFFF;
+  border-radius: 29px;
+  .stepBackground {
+      z-index: -1;
+      width: 146px;
+      height: 295px;
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      transform: translate(50px, -50%);
+  }
+  &:nth-child(2) {
+    .stepBackground {
+        width: 232px;
+        height: 298px;
+        transform: translate(12px, -50%);
+    }
+  }
+  &:last-child {
+    .stepBackground {
+        width: 238px;
+        height: 298px;
+        transform: translate(64px, -50%);
+    }
+  }
+}

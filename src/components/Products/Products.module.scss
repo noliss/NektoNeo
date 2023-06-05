@@ -1,0 +1,16 @@
+.products {
+  margin-top: 56px;
+}
+
+.productsCards {
+  margin-top: 50px;
+  // display: grid;
+  // grid-template-areas: 'p p p';
+  // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* автоматический перенос на новую строку */
+  // grid-auto-rows: 1fr; /* все строки имеют равную высоту */
+  // grid-gap: 20px; /* расстояние между карточками */
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+}

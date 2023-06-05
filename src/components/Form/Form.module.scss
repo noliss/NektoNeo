@@ -1,0 +1,47 @@
+.form {
+  margin-top: 157px;
+}
+
+.formBlock {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.formInput {
+  width: 350px;
+  padding: 24px 19px;
+  border: 1.05px solid #FFFFFF;
+  border-radius: 10px;
+  background: transparent;
+  font-family: 'RS';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18.9677px;
+  line-height: 27px;
+  /* identical to box height, or 144% */
+  margin-right: 21px;
+
+  input {
+    background: transparent;
+    border: none;
+    font-family: 'RS';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18.9677px;
+    line-height: 27px;
+    color: #FFFFFF;
+    outline: none;
+  }
+
+
+  color: #FFFFFF;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.formButton {
+  margin-top: 70px;
+}

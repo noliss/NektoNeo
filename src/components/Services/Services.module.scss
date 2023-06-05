@@ -1,0 +1,70 @@
+.services {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.serviceItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 285px;
+  width: 285px;
+  max-height: 421px;
+  background: rgba(62, 62, 62, 0.07);
+  box-shadow: 0px 58.1116px 45.6591px -25.5968px rgba(29, 32, 33, 0.64);
+  backdrop-filter: blur(21.5px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 33.7033px;
+  margin-top: 100px;
+  margin-right: 20px;
+  padding: 0 22px 59px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.serviceTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'RS';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  margin-bottom: 18px;
+  color: #FFFFFF;
+  margin-top: 27px;
+  min-height: 45px;
+}
+
+.serviceDescription {
+  max-width: 240px;
+  font-family: 'RS';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  
+  color: #FFFFFF;
+}
+
+.serviceImg {
+  width: 204px;
+  height: 204px;
+  min-width: 204px;
+  min-height: 204px;
+  margin-top: -100px;
+  margin-bottom: 14px;
+}
+
+.serviceButton {
+  margin-top: 63px;
+  color: #FFFFFF;
+  box-shadow: 0px 4.2659px 4.2659px rgba(0, 0, 0, 0.25);
+}

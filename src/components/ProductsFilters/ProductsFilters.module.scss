@@ -1,0 +1,89 @@
+.productsFilterPrice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.productsFilterPriceItem {
+  font-family: 'RS';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16.2652px;
+  line-height: 16px;
+  text-align: center;
+  color: #FFFFFF;
+  text-shadow: 0px 4.53502px 4.53502px rgba(0, 0, 0, 0.25);
+  padding: 10px 15px;
+  // border: 3px solid transparent;
+  border-radius: 13px;
+  border-image: linear-gradient(180deg, rgba(62, 62, 62, 0.31) 0%, rgba(62, 62, 62, 0.1643) 100%);
+  // border-image-slice: 1;
+  background: linear-gradient(180deg, rgba(62, 62, 62, 0.31) 0%, rgba(62, 62, 62, 0.1643) 100%);
+  // box-shadow: 0px 61.7778px 48.5397px -27.2116px rgba(29, 32, 33, 0.64);
+  // backdrop-filter: blur(22.8564px);
+  /* Note: backdrop-filter has minimal browser support */
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: -2px;
+  //   bottom: -2px;
+  //   left: -2px;
+  //   right: -2px;
+  //   background: linear-gradient(180deg, rgba(62, 62, 62, 0.31) 0%, rgba(62, 62, 62, 0.1643) 100%);
+  //   border-radius: 34px;
+  //   z-index: -1;
+  // }
+
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.productsFilterPriceItemActive {
+  background: linear-gradient(167.1deg, rgba(124, 83, 255, 0.8) 1.06%, rgba(194, 122, 255, 0.8) 92.98%);
+  border: 3px solid rgba(255, 255, 255, 0.21);
+  box-shadow: 0px -6.09481px 24.3793px -36.5689px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(152.37px);
+  /* Note: backdrop-filter has minimal browser support */
+}
+
+.productsFilterType {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.productsFilterTypeItem {
+  min-width: 355px;
+  padding: 12px 10px;
+  font-family: 'RS';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16.2652px;
+  line-height: 16px;
+  text-align: center;
+
+  color: #FFFFFF;
+  cursor: pointer;
+
+  text-shadow: 0px 4.53502px 4.53502px rgba(0, 0, 0, 0.25);
+
+  text-shadow: 0px 4.53502px 4.53502px rgba(0, 0, 0, 0.25);
+  padding: 10px 15px;
+  // border: 3px solid transparent;
+  border-radius: 13px;
+  border-image: linear-gradient(180deg, rgba(62, 62, 62, 0.31) 0%, rgba(62, 62, 62, 0.1643) 100%);
+  // border-image-slice: 1;
+  background: linear-gradient(180deg, rgba(62, 62, 62, 0.31) 0%, rgba(62, 62, 62, 0.1643) 100%);
+  // box-shadow: 0px 61.7778px 48.5397px -27.2116px rgba(29, 32, 33, 0.64);
+  // backdrop-filter: blur(22.8564px);
+  /* Note: backdrop-filter has minimal browser support */
+}
+
+.productsFilterTypeItemActive {
+  background: linear-gradient(167.1deg, rgba(124, 83, 255, 0.8) 1.06%, rgba(194, 122, 255, 0.8) 92.98%);
+  border: 3px solid rgba(255, 255, 255, 0.21);
+  box-shadow: 0px -6.09481px 24.3793px -36.5689px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(152.37px);
+  /* Note: backdrop-filter has minimal browser support */
+}

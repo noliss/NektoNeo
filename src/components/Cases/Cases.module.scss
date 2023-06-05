@@ -1,0 +1,87 @@
+.cases {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 64px;
+  // max-width: 1040px;
+  // width: 1040px;
+}
+
+.casesItem {
+  display: flex;
+  width: 506px;
+  height: 261px;
+  min-height: 261px;
+  background: linear-gradient(180deg, rgba(22, 22, 22, 0.322) 0%, rgba(0, 0, 0, 0.441) 100%);
+  box-shadow: 0px 58.1116px 45.6591px -25.5968px rgba(29, 32, 33, 0.64);
+  backdrop-filter: blur(86px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 33.7033px;
+  margin-bottom: 13px;
+  padding: 18px 20px 22px 33px;
+  &:nth-child(n + 1) {
+    margin-right: 20px;
+  }
+}
+
+.casesLeft {
+  max-width: 193px;
+  margin-top: 48px;
+}
+
+.casesRight{
+  margin-left: 23px;
+  position: relative;
+}
+
+.casesAdvant {
+  margin-top: 24px;
+  font-family: 'RS';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 156.79%;
+  /* identical to box height, or 19px */
+
+  text-align: center;
+
+  color: #FFFFFF;
+}
+
+.casesName {
+  font-family: 'RS';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20.1786px;
+  line-height: 156.79%;
+  /* identical to box height, or 32px */
+
+
+  color: #FFFFFF;
+}
+
+.casesText {
+  margin-top: 10px;
+  max-width: 239px;
+  font-family: 'RS';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12.6116px;
+  line-height: 156.79%;
+  /* or 20px */
+
+
+  color: #FFFFFF;
+}
+
+.casesStars {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  max-width: 128px;
+  width: 128px;
+}

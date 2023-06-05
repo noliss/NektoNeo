@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 153px;
+  background: black;
+}
+
+.headerLogo {
+  max-height: 148px;
+  max-width: 179px;
+  width: 179px;
+  margin-right: 67px;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+}
+
+.headerButton {
+  cursor: pointer;
+  padding: 15px 14px;
+  max-height: 47px;
+  background: linear-gradient(180deg, rgba(62, 62, 62, 0.31) 0%, rgba(62, 62, 62, 0.1643) 100%);
+  border-radius: 16px;  
+  font-family: 'RS';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16.9704px;
+  line-height: 17px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+}
