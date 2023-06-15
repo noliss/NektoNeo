@@ -7,7 +7,6 @@ const ProductsFilters = ({ onClick }) => {
   const [type, setType] = useState("design");
 
   useEffect(() => {
-    console.log(price, type)
     onClick(price, type);
   }, [price, type])
 

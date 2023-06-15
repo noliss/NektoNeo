@@ -36,9 +36,9 @@ const Live = () => {
   ];
   return (
     <div className={styles.live}>
-      <Slider focusOnSelect autoplay slidesToScroll={4} rows={1} swipeToSlide swipeThreshold={50} slidesToShow={4} centerMode arrows={false} easing>
-        {lives.map((item) => (
-          <a href={item.link} className={styles.liveItem}>
+      <Slider focusOnSelect autoplay slidesToScroll={1} rows={1} swipeToSlide swipeThreshold={50} slidesToShow={4} centerMode arrows={false} easing>
+        {lives.map((item, index) => (
+          <a key={index} href={item.link} className={styles.liveItem}>
             <img src={item.img} alt="live" />
           </a>
         ))}

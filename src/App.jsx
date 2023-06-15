@@ -18,7 +18,7 @@ import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    <div>
+    <div className={styles.background}>
       <section className={styles.mainBlock}>
         <div className={styles.container}>
           <Header/>
@@ -35,7 +35,7 @@ const App = () => {
           <Services />
         </div>
       </section>
-      <section>
+      <section className={styles.products}>
         <div className={styles.container}>
           <Typography className={styles.productsTypography} type="h2" text="ЛУЧШЕЕ РЕШЕНИЕ ДЛЯ" />
           <Products/>

@@ -3,6 +3,7 @@ import ProductsFilters from '../ProductsFilters';
 import styles from './Products.module.scss';
 import { products } from '../../const/const';
 import { useState, useCallback } from 'react';
+import classNames from 'classnames';
 
 const Products = () => {
   const [filteredProducts, setFilteredProducts] = useState(products);
@@ -19,12 +20,12 @@ const Products = () => {
     }));
   }, []);
 
-  console.log(filteredProducts)
+
 
   return <div className={styles.products}>
     <ProductsFilters onClick={(price, type) => selectedFilter(price, type)}/>
     <div className={styles.productsCards}>
-      { filteredProducts.map((item) => 
+      { filteredProducts.map((item, index) => 
         <ProductsCard 
           key={item.title}
           title={item.title} 

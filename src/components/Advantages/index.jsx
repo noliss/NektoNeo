@@ -44,8 +44,8 @@ const Advantages = () => {
   ];
   return (
     <div className={styles.advantages}>
-      {advList.map((item) => {
-        return <div className={styles.advantagesItem}>
+      {advList.map((item, index) => {
+        return <div key={index} className={styles.advantagesItem}>
           {item.icon}
           <p className={styles.advantagesItemTitle}>{item.title}</p>
           <p className={styles.advantagesItemDesc}>{item.desc}</p>

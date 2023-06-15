@@ -25,7 +25,9 @@ const ProductsCard = ({ title, image, forTo, devices, price }) => {
         </ul>
       </div>
       <div className={styles.productPrice}>{price} Р</div>
-      <Button className={styles.productButton}>Купить</Button>
+      <div className={styles.productButtonCtn}>
+          <Button type="pink" className={styles.productButton}>Купить</Button>
+      </div>
     </div>
   </div>
 }

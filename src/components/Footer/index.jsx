@@ -16,11 +16,11 @@ const Footer = () => {
         <LogoSVG className={styles.footerLogo} />
       </div>
       <div className={styles.footerColumn}>
-        <p className={styles.footerPhone}>
+        <div className={styles.footerPhone}>
         Телефон для горячей линии
         <p className={styles.footerPhoneItem}>+7(900)123-12-45</p>
         с 10:00 - 23:00 пн-пт
-        </p>
+        </div>
       </div>
     </div>
   );

@@ -3,9 +3,13 @@
   box-shadow: 0px 40px 45.6591px -25.5968px rgba(29, 32, 33, 0.64);
   backdrop-filter: blur(21.5px);
   /* Note: backdrop-filter has minimal browser support */
-
   border-radius: 33.7033px;
   margin-bottom: 80px;
+  margin-right: 89px;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
 }
 
 .productCardContent {
@@ -16,9 +20,13 @@
   margin-bottom: 24px;
   min-width: 317px;
   width: 317px;
-  background: rgba(21, 21, 21, 0.2);
-  box-shadow: 0px 40px 45.6591px -25.5968px rgba(29, 32, 33, 0.64);
-  backdrop-filter: blur(21.5px);
+  // background: rgba(21, 21, 21, 0.1);
+  // box-shadow: 0px 40px 45.6591px -25.5968px rgba(29, 32, 33, 0.64);
+  // backdrop-filter: blur(21.5px);
+  background-image: url('../../images/products/blue_blur.png');
+  background-repeat: no-repeat;
+  background-size: 130%;
+  background-position: top center;
   /* Note: backdrop-filter has minimal browser support */
 
   border-radius: 33.7033px;
@@ -112,6 +120,7 @@
   font-size: 18.6089px;
   line-height: 127.2%;
   padding: 7px 21px;
+  min-height: 40px;
   /* identical to box height, or 24px */
 
 
@@ -142,4 +151,12 @@
   padding: 11px 90px;
   color: #FFFFFF;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.productButtonCtn {
+  padding-bottom: 37px;
+}
+
+.productCardLow {
+  margin-right: 89px;
 }

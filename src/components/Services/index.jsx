@@ -48,7 +48,6 @@ const Services = () => {
             </p>,
     }
   ]
-  console.log(services);
   return (
     <>
       <div className={styles.services}>

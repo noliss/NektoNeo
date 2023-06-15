@@ -53,9 +53,9 @@ const Cases = () => {
   return (
     <Slider className={styles.slider} arrows={false}>
       <div className={styles.cases}>
-        {cases.map((item) => {
+        {cases.map((item, index) => {
           return (
-            <div className={styles.casesItem}>
+            <div key={index} className={styles.casesItem}>
               <div className={styles.casesLeft}>
                 <img src={item.img} alt="" />
                 <p className={styles.casesAdvant}>{item.adv}</p>
@@ -72,9 +72,9 @@ const Cases = () => {
         })}
       </div>
       <div className={styles.cases}>
-        {cases.map((item) => {
+        {cases.map((item, index) => {
           return (
-            <div className={styles.casesItem}>
+            <div key={index} className={styles.casesItem}>
               <div className={styles.casesLeft}>
                 <img src={item.img} alt="" />
                 <p className={styles.casesAdvant}>{item.adv}</p>

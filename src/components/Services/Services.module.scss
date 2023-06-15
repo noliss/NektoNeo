@@ -46,7 +46,7 @@
   max-width: 240px;
   font-family: 'RS';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 14px;
   line-height: 14px;
   text-align: center;
@@ -64,7 +64,17 @@
 }
 
 .serviceButton {
-  margin-top: 63px;
-  color: #FFFFFF;
-  box-shadow: 0px 4.2659px 4.2659px rgba(0, 0, 0, 0.25);
+  display: block;
+  max-width: 369px;
+  margin: 63px auto;
+
+  span {
+    font-size: 27.6174px;
+    font-weight: 800;
+    line-height: 32px;
+  
+    color: #FFFFFF;
+  
+    text-shadow: 0px 4.2659px 4.2659px rgba(0, 0, 0, 0.25);
+  }
 }

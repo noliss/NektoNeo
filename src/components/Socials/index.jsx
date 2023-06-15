@@ -11,33 +11,38 @@ const Socials = () => {
       img: <DzenSVG />,
       link: '#',
       desc: '',
+      alt: 'Дзен'
     },
     {
       img: <InstSVG />,
       link: '#',
       desc: 'Meta признана экстремистской организацией на территории РФ',
+      alt: 'Инстаграм'
     },
     {
       img: <YtSVG />,
       link: '#',
       desc: '',
+      alt: 'Ютуб'
     },
     {
       img: <TgSVG />,
       link: '#',
       desc: '',
+      alt: 'Телеграм'
     },
     {
       img: <VkSVG />,
       link: '#',
       desc: '',
+      alt: 'Вконтакте'
     },
   ];
   return (
     <div className={styles.socilas}>
-      {socialItems.map((item) => {
+      {socialItems.map((item, index) => {
         return (
-          <a href={item.link} className={styles.socialsItem}>
+          <a key={index} aria-label={item.alt} href={item.link} className={styles.socialsItem}>
             {item.img}
             <div className={styles.socialItemDesc}>{item.desc}</div>
           </a>

@@ -10,7 +10,7 @@
   // grid-auto-rows: 1fr; /* все строки имеют равную высоту */
   // grid-gap: 20px; /* расстояние между карточками */
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: stretch;
   flex-wrap: wrap;
 }
