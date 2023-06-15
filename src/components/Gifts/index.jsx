@@ -26,7 +26,7 @@ const Gifts = () => {
         </div>
         <img src={computerPhoto} alt="Фирменные девайсы" />
       </div>
-      <Button className={styles.giftsButton}>
+      <Button type="pink" className={styles.giftsButton}>
         Заказать пк
       </Button>
     </>

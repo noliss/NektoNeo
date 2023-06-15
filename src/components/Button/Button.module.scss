@@ -46,6 +46,21 @@
   }
 }
 
+.buttonPink::after {
+  transition: all 0.2s;
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 2;
+  left: 0px;
+  top: 0px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  border-radius: 26px;
+  background: linear-gradient(167.1deg, rgba(124, 83, 255, 0.8) 1.06%, rgba(194, 122, 255, 0.8) 92.98%);
+  border: 3.5px solid rgba(255, 255, 255, 0.21);
+}
+
 .button::before {
   transition: all 0.2s;
   content: "";

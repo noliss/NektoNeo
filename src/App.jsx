@@ -15,6 +15,8 @@ import Cases from "./components/Cases";
 import Live from "./components/Live";
 import Form from "./components/Form";
 import Footer from "./components/Footer";
+import light from "./images/backgrounds/light.svg";
+import miniCross from "./images/backgrounds/miniCross.svg";
 
 const App = () => {
   return (
@@ -30,6 +32,8 @@ const App = () => {
         </div>
       </section>
       <section className={styles.services}>
+        <img className={styles.servicesLightRight} src={light} alt="Правое свечение" />
+        <img className={styles.servicesLightLeft} src={light} alt="Левое свечение" />
         <div className={styles.container}>
           <Typography className={styles.servicesTitle} type="h2" text="НАШИ УСЛУГИ" />
           <Services />
@@ -46,8 +50,9 @@ const App = () => {
           <Payment />
         </div>
       </section>
-      <section>
+      <section className={styles.steps}>
         <div className={styles.container}>
+          <img className={styles.stepsMiniCross} src={miniCross} alt="крестик" />
           <Typography className={styles.productsTypography} type="h2" text="ЭТАПЫ РАБОТЫ" />
           <Stages />
         </div>

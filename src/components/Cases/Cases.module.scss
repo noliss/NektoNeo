@@ -85,3 +85,20 @@
   max-width: 128px;
   width: 128px;
 }
+
+.casesButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 296px;
+  height: 68px;
+  margin: 28px auto 0;
+  span {
+    font-size: 26px;
+    margin-bottom: 3px;
+    font-weight: 800;
+    line-height: 32px;
+    color: #ffffff;
+    text-shadow: 0px 4.2659px 4.2659px rgba(0, 0, 0, 0.25);
+  }
+}

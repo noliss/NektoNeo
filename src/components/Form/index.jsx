@@ -28,7 +28,7 @@ const Form = () => {
         />
         <input className={styles.formInput} type="email" placeholder="E-mail"/>
       </div>
-      <Button className={styles.formButton}>Оставить заявку</Button>
+      <Button type="pink" className={styles.formButton}>Оставить заявку</Button>
     </div>
   )
 }

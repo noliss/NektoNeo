@@ -4,6 +4,30 @@
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 40px;
+  position: relative;
+
+  &::after {
+    content: "";
+    right: 349px;
+    top: 182px;
+    position: absolute;
+    width: 106px;
+    height: 106px;
+    background-image: url('../../images/backgrounds/web.png');
+    z-index: -1;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 240px;
+    top: 361px;
+    width: 250px;
+    height: 250px;
+    background: #ffffff;
+    opacity: 1;
+    filter: blur(281px);
+  }
 }
 
 .advantagesItem {

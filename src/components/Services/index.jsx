@@ -59,7 +59,7 @@ const Services = () => {
           </div>
         )}
       </div>
-      <Button className={styles.serviceButton}>Заказать свой идеальный ПК</Button>
+      <Button type="pink" className={styles.serviceButton}>Заказать свой идеальный ПК</Button>
     </>
   )
 }
