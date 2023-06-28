@@ -100,3 +100,14 @@
     margin-top: -3px;
   }
 }
+
+@media screen and (max-width: 1230px) {
+  .payment {
+    flex-wrap: wrap-reverse;
+  }
+
+  .about {
+    margin-left: 120px;
+    margin-top: 15px;
+  }
+}

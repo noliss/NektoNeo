@@ -4,10 +4,9 @@ import computer1 from "../../images/cases/1.jpg";
 import computer2 from "../../images/cases/2.jpg";
 import computer3 from "../../images/cases/3.jpg";
 import computer4 from "../../images/cases/4.jpg";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Button from "../Button"
+import Button from "../Button";
 
 const Cases = () => {
   const cases = [
@@ -53,46 +52,25 @@ const Cases = () => {
 
   return (
     <>
-      <Slider className={styles.slider} arrows={false}>
-        <div className={styles.cases}>
-          {cases.map((item, index) => {
-            return (
-              <div key={index} className={styles.casesItem}>
-                <div className={styles.casesLeft}>
-                  <img src={item.img} alt="" />
-                  <p className={styles.casesAdvant}>{item.adv}</p>
-                </div>
-                <div className={styles.casesRight}>
-                  <p className={styles.casesName}>{item.name}</p>
-                  <p className={styles.casesText}>{item.text}</p>
-                  <div className={styles.casesStars}>
-                    {stars.map((item) => item)}
-                  </div>
+      <div className={styles.cases}>
+        {cases.map((item, index) => {
+          return (
+            <div key={index} className={styles.casesItem}>
+              <div className={styles.casesLeft}>
+                <img src={item.img} alt="" />
+                <p className={styles.casesAdvant}>{item.adv}</p>
+              </div>
+              <div className={styles.casesRight}>
+                <p className={styles.casesName}>{item.name}</p>
+                <p className={styles.casesText}>{item.text}</p>
+                <div className={styles.casesStars}>
+                  {stars.map((item) => item)}
                 </div>
               </div>
-            );
-          })}
-        </div>
-        <div className={styles.cases}>
-          {cases.map((item, index) => {
-            return (
-              <div key={index} className={styles.casesItem}>
-                <div className={styles.casesLeft}>
-                  <img src={item.img} alt="" />
-                  <p className={styles.casesAdvant}>{item.adv}</p>
-                </div>
-                <div className={styles.casesRight}>
-                  <p className={styles.casesName}>{item.name}</p>
-                  <p className={styles.casesText}>{item.text}</p>
-                  <div className={styles.casesStars}>
-                    {stars.map((item) => item)}
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </Slider>
+            </div>
+          );
+        })}
+      </div>
       <Button className={styles.casesButton}>Заказать ПК</Button>
     </>
   );

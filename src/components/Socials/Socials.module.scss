@@ -1,5 +1,5 @@
 .socilas {
-  width: 912px;
+  max-width: 912px;
   margin: 70px auto 0;
   padding: 0 35px;
   display: flex;
@@ -52,4 +52,18 @@
   text-align: center;
 
   color: #8e8e8e;
+}
+
+@media screen and (max-width: 966px) {
+  .socilas {
+    gap: 1rem;
+    flex-wrap: wrap;
+    width: 693px;
+  }
+  .socialsItem {
+    flex: 1 1 calc((100% / 3) - 2rem);
+    &:nth-child(2) {
+      margin-bottom: 30px;
+    }
+  }
 }

@@ -47,3 +47,39 @@
     }
   }
 }
+
+@media screen and (max-width: 1080px) {
+  .steps {
+    flex-wrap: wrap;
+    height: 1000px;
+  }
+
+  .step {
+    width: 100%;
+    max-width: 530px;
+    margin: 0 auto 150px;
+    .stepBackground {
+      z-index: -1;
+      width: 146px;
+      height: 295px;
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      transform: translate(0px, -50%);
+  }
+    &:nth-child(2) {
+      .stepBackground {
+          width: 232px;
+          height: 298px;
+          transform: translate(125%, -50%);
+      }
+    }
+    &:last-child {
+      .stepBackground {
+          width: 238px;
+          height: 298px;
+          transform: translate(0px, -50%);
+      }
+    }
+  }
+}

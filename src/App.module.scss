@@ -14,13 +14,14 @@ body {
 
 .mainBlock {
   .container {
-    width: 1200px;
+    max-width: 1200px;
   }
 }
 
 .container {
-  width: 1170px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .services {
@@ -80,13 +81,13 @@ body {
 
 .products {
   .container {
-    width: 1130px;
+    max-width: 1130px;
   }
 }
 
 .advantages {
   .container {
-    width: 1230px;
+    max-width: 1230px;
   }
   position: relative;
   &::before {
@@ -116,7 +117,7 @@ body {
     z-index: -1;
   }
   .container {
-    width: 1070px;
+    max-width: 1090px;
   }
 }
 
@@ -135,6 +136,8 @@ body {
 .live {
   .container {
     width: 100%;
+    max-width: 100%;
+    padding: 0;
   }
 }
 

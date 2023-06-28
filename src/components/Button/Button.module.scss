@@ -24,14 +24,17 @@
     color: #ffffff;
 
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    transition: all 0.2s;
   }
 
   &:hover {
     &::before {
-      background: 3.05px solid rgba(255, 255, 255, 0.21);
+      border: 3.05px solid rgba(255, 255, 255, 0.21);
+      // border-radius: 21px;
+      background: linear-gradient(167.1deg, rgba(176, 149, 255, 1) 1.06%, rgba(176, 149, 255, 0.92) 92.98%);
+      transition: background 0.2s linear, border 0.2s linear;
     }
     &::after {
+      transition: background 0.2s linear;
       background: linear-gradient(
           167.1deg,
           rgba(124, 83, 255, 0.8) 1.06%,
@@ -47,7 +50,6 @@
 }
 
 .buttonPink::after {
-  transition: all 0.2s;
   content: "";
   display: block;
   position: absolute;
@@ -62,7 +64,7 @@
 }
 
 .button::before {
-  transition: all 0.2s;
+  transition: background 0.2s linear, color 0.2s linear;
   content: "";
   display: block;
   position: absolute;
@@ -81,7 +83,7 @@
 
 /* Border */
 .button::after {
-  transition: all 0.2s;
+  transition: background 0.2s linear, color 0.2s linear;
   content: "";
   display: block;
   position: absolute;

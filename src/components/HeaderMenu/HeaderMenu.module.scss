@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  width: 490px;
+  max-width: 490px;
   min-width: 490px;
   // padding: 20px 0;
 }
@@ -23,5 +23,13 @@
   }
   &:hover {
     text-shadow: 0 0 .9px #fff, 0 0 .9px #fff, 0 0 .9px #fff;
+  }
+}
+
+@media screen and (max-width: 1230px) {
+  .menu {
+    max-width: 540px;
+    width: 540px;
+    margin-top: 5px;
   }
 }

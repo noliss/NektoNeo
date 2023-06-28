@@ -23,3 +23,11 @@
   backdrop-filter: blur(16.351px);
   border-radius: 33.7033px;
 }
+
+@media screen and (max-width: 1230px) {
+  .content {
+    width: 900px;
+    max-width: 900px;
+    margin: 50px auto 0;
+  }
+}
