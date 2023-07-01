@@ -26,8 +26,20 @@
 
 @media screen and (max-width: 1230px) {
   .content {
-    width: 900px;
     max-width: 900px;
     margin: 50px auto 0;
   }
 }
+
+@media screen and (max-width: 900px) {
+  .content {
+    height: 300px;
+    padding: 62px 31px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+     display: none;
+  } 
+ }

@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background-color: #000;
+  background-color: #090808;
   background-image: url("./images/grid.svg");
   background-position: top center;
   background-size: contain;
@@ -51,8 +51,16 @@ body {
   filter: blur(246px);
 }
 
+.social {
+  margin-top: 70px;
+}
+
 .servicesTitle {
   margin-bottom: 17px;
+}
+
+.stepsTypography {
+  margin-top: 88px;
 }
 
 .productsTypography {
@@ -135,7 +143,7 @@ body {
 
 .live {
   .container {
-    width: 100%;
+    max-width: 100%;
     max-width: 100%;
     padding: 0;
   }
@@ -143,12 +151,78 @@ body {
 
 .form {
   .container {
-    width: 1180px;
+    max-width: 1180px;
   }
 }
 
 .footer {
   .container {
-    width: 1230px;
+    max-width: 1230px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  body {
+    background-size: 130%;
+  }
+  .servicesLightRight, .servicesLightLeft {
+     display: none;
+  }
+  .services {
+    margin-top: 0px;
+  }
+  .steps {
+    margin-top: 65px;
+  }
+  .payment {
+    margin-top: 0px;
+  }
+  .stepsTypography {
+    font-size: 26px;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: -55px;
+  }
+  .servicesTitle {
+    font-size: 26px !important;
+  }
+  .productsTypography {
+    font-size: 26px !important;
+    margin-top: -20px;
+  }
+  .giftsTypography {
+    position: relative;
+    font-size: 26px !important;
+    z-index: 10;
+  }
+  .social {
+    margin-top: 25px;
+  }
+  .cases {
+    margin-top: 65px;
+  }
+  .live {
+    margin-top: 66px;
+  }
+  .gifts {
+    margin-top: 0px;
+  }
+  .advantages {
+    margin-top: 70px;
+  }
+ }
+
+ @media screen and (max-width: 520px) {
+  .advantagesTypography {
+    font-size: 26px !important;
+  }
+  .socialTypography {
+    font-size: 26px !important;
+  }
+  .advantages {
+    &::before {
+      width: 288px;
+    }
+  }
+}
+//  font-size: 26px;

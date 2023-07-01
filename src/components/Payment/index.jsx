@@ -1,5 +1,7 @@
 import styles from './Payment.module.scss';
 import { ReactComponent as TinkoffSVG } from '../../images/svg/tinkoff.svg';
+import ellipseBig from '../../images/payments/ellipse_big.png'
+import ellipseSmall from '../../images/payments/ellipse_small.png'
 
 const Payment = () => {
   return (
@@ -11,6 +13,8 @@ const Payment = () => {
           <span className={styles.aboutOptionsItem}>Выгодные условия</span>
           <span className={styles.aboutOptionsItem}>Быстрое одобрение</span>
         </div>
+        <img src={ellipseBig} alt='ell' className={styles.aboutBigEl}/>
+        <div className={styles.aboutSmallEl}/>
       </div>
       <div className={styles.steps}>
         <span className={styles.stepsTitle}>Рассрочка</span>

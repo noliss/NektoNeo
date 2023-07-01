@@ -99,3 +99,9 @@
     rgba(74, 74, 74, 1) 100%
   );
 }
+
+@media screen and (max-width: 768px) {
+  .button, .buttonPink span {
+    font-size: 14px;
+  }
+}

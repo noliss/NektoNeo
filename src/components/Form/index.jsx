@@ -15,7 +15,7 @@ const Form = () => {
 
   return (
     <div className={styles.form}>
-      <Typography className={styles.productsTypography} type="h3" text="Оставьте заявку, чтобы получить консультацию" />
+      <Typography className={styles.formTypography} type="h3" text="Оставьте заявку, чтобы получить консультацию" />
       <div className={styles.formBlock}>
         <input className={styles.formInput} placeholder="Имя" />
         <PhoneInput

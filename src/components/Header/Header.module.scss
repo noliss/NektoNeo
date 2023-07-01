@@ -48,3 +48,14 @@
     margin-top: 30px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  
+  .headerLogo {
+    width: 262px;
+    height: 235px;
+    max-width: none;
+    max-height: none;
+    margin-right: 0;
+  }
+}

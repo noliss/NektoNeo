@@ -17,6 +17,9 @@
   margin-right: 20px;
   padding: 0 22px 59px;
   z-index: -1;
+  box-shadow: 0px 58.111610412597656px 45.659122467041016px -25.596782684326172px rgba(29, 32, 33, 0.64);
+  backdrop-filter: blur(21.5px);
+  border-radius: 22px;
   &:last-child {
     margin-right: 0;
   }
@@ -67,11 +70,7 @@
     width: calc(100% - 4px);
     height: calc(100% - 4px);
     border-radius: 15px;
-    background: linear-gradient(
-      0deg,
-      rgba(15, 15, 15, 1) 0%,
-      rgba(15, 15, 15, 0.9) 100%
-    );
+    background: #090808;
   }
 }
 
@@ -144,5 +143,36 @@
   .serviceDescription {
     line-height: 20px;
     max-width: 330px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .serviceItem:nth-child(n + 2) {
+    margin-top: 45px;
+  }
+
+  .serviceTitle {
+    line-height: 25px;
+  }
+
+  .serviceDescription {
+    min-width: 230px;
+  }
+
+  .serviceItem {
+    width: 100%;
+    max-width: 100%;
+    margin-right: 0px;
+    max-height: 480px;
+  }
+
+  .serviceButton {  
+    width: 100%;
+    span {
+      font-size: 21px;
+    }
+  }
+  .serviceButton {
+    margin-top: 28px;
   }
 }

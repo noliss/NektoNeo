@@ -10,7 +10,21 @@
   // grid-auto-rows: 1fr; /* все строки имеют равную высоту */
   // grid-gap: 20px; /* расстояние между карточками */
   display: flex;
-  justify-content: flex-start;
-  align-items: stretch;
+  // justify-content: space-between;
+  // align-items: stretch;
+  // flex-wrap: wrap;
+  column-gap: calc(6rem + 4px);
   flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1130px) {
+  .productsCards {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .products {
+    margin-top: 15px;
+  }
 }

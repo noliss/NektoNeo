@@ -7,15 +7,15 @@ const Stages = () => {
   return (
     <div className={styles.steps}>
       <p className={styles.step}>
-          <Step1SVG className={styles.stepBackground} />
+          <Step1SVG fill="#090808" className={styles.stepBackground} />
           Оставьте заявку на сайте или позвоните нам. 
       </p>
       <p className={styles.step}>
-          <Step2SVG className={styles.stepBackground} />
+          <Step2SVG fill="#090808" className={styles.stepBackground} />
           Подробно обсудим ход выполнения сборки и подберем необходимые комплектующие под ваш запрос.
       </p>
       <p className={styles.step}>
-          <Step3SVG className={styles.stepBackground} />
+          <Step3SVG fill="#090808" className={styles.stepBackground} />
           Собирем ПК вашей мечты, сделаем все необходимые тесты, бережно упакуем и доставим.
       </p>
     </div>

@@ -32,3 +32,15 @@
     border-radius: 34px;
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .liveItem {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .liveItem {
+    height: 200px;
+  }
+}

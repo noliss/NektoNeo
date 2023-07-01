@@ -53,25 +53,25 @@ const App = () => {
       <section className={styles.steps}>
         <div className={styles.container}>
           <img className={styles.stepsMiniCross} src={miniCross} alt="крестик" />
-          <Typography className={styles.productsTypography} type="h2" text="ЭТАПЫ РАБОТЫ" />
+          <Typography className={styles.stepsTypography} type="h2" text="ЭТАПЫ РАБОТЫ" />
           <Stages />
         </div>
       </section>
       <section className={styles.gifts}>
         <div className={styles.container}>
-          <Typography className={styles.productsTypography} type="h2" text="ВМЕСТЕ С ПК ВЫ ПОЛУЧИТЕ" />
+          <Typography className={styles.giftsTypography} type="h2" text="ВМЕСТЕ С ПК ВЫ ПОЛУЧИТЕ" />
           <Gifts />
         </div>
       </section>
       <section className={styles.advantages}>
         <div className={styles.container}>
-          <Typography className={styles.productsTypography} type="h2" text="НАШИ ПРЕИМУЩЕСТВА" />
+          <Typography className={styles.advantagesTypography} type="h2" text="НАШИ ПРЕИМУЩЕСТВА" />
           <Advantages />
         </div>
       </section>
       <section className={styles.social}>
         <div className={styles.container}>
-          <Typography className={styles.productsTypography} type="h2" text="НАШИ СОЦИАЛЬНЫЕ СЕТИ" />
+          <Typography className={styles.socialTypography} type="h2" text="НАШИ СОЦИАЛЬНЫЕ СЕТИ" />
           <Socials />
         </div>
       </section>

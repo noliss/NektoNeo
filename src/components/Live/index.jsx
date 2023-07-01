@@ -34,9 +34,23 @@ const Live = () => {
       link: "#",
     },
   ];
+  const responsive = [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+      },
+    }
+];
   return (
     <div className={styles.live}>
-      <Slider focusOnSelect autoplay slidesToScroll={1} rows={1} swipeToSlide swipeThreshold={50} slidesToShow={4} centerMode arrows={false} easing>
+      <Slider responsive={responsive} focusOnSelect autoplay  slidesToScroll={1} rows={1} swipeToSlide swipeThreshold={50} slidesToShow={4} centerMode arrows={false} easing>
         {lives.map((item, index) => (
           <a key={index} href={item.link} className={styles.liveItem}>
             <img src={item.img} alt="live" />

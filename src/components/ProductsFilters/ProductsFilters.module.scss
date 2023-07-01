@@ -1,11 +1,14 @@
 .productsFilterPrice {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 1rem;
+  // justify-content: space-between;
+  flex-wrap: wrap;
   margin-bottom: 24px;
 }
 
 .productsFilterPriceItem {
+  flex: 1 1 calc((100% / 4) - 2rem);
   font-family: 'RS';
   font-style: normal;
   font-weight: 800;
@@ -15,28 +18,16 @@
   color: #FFFFFF;
   text-shadow: 0px 4.53502px 4.53502px rgba(0, 0, 0, 0.25);
   padding: 10px 15px;
-  // border: 3px solid transparent;
-  border-radius: 13px;
-  border-image: linear-gradient(180deg, rgba(62, 62, 62, 0.31) 0%, rgba(62, 62, 62, 0.1643) 100%);
-  // border-image-slice: 1;
+  border: 3px solid rgba(62, 62, 62, 0.31);
+  // border-image: linear-gradient(180deg, rgba(62, 62, 62, 0.31) 0%, rgba(62, 62, 62, 0.1643) 100%);
   background: linear-gradient(180deg, rgba(62, 62, 62, 0.31) 0%, rgba(62, 62, 62, 0.1643) 100%);
-  // box-shadow: 0px 61.7778px 48.5397px -27.2116px rgba(29, 32, 33, 0.64);
-  // backdrop-filter: blur(22.8564px);
-  /* Note: backdrop-filter has minimal browser support */
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   top: -2px;
-  //   bottom: -2px;
-  //   left: -2px;
-  //   right: -2px;
-  //   background: linear-gradient(180deg, rgba(62, 62, 62, 0.31) 0%, rgba(62, 62, 62, 0.1643) 100%);
-  //   border-radius: 34px;
-  //   z-index: -1;
-  // }
 
   border-radius: 12px;
   cursor: pointer;
+
+  &:first-child {
+    flex-basis: calc((100% / 4) - 2rem - 270px);
+  }
 }
 
 .productsFilterPriceItemActive {
@@ -88,6 +79,18 @@
   /* Note: backdrop-filter has minimal browser support */
 }
 
+.productFilterMobileTitle {
+  display: none;
+  color: #FFF;
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-size: 26px;
+  font-family: RS;
+  text-align: center;
+  // margin-top: 15px;
+}
+
 @media screen and (max-width: 1230px) {
   .productsFilterPrice, .productsFilterType {
     flex-wrap: wrap;
@@ -101,5 +104,33 @@
 
   .productsFilterPriceItem, .productsFilterTypeItem {
     flex: 1 1 calc((100% / 3) - 2rem);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .productFilterMobileTitle {
+    display: block;
+  }
+  .productsFilterPriceItem {
+    flex: 1 1 calc((100% / 1) - 2rem);
+    font-family: 'RS';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16.2652px;
+    line-height: 16px;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 4.53502px 4.53502px rgba(0, 0, 0, 0.25);
+    padding: 10px 15px;
+    border: 3px solid rgba(62, 62, 62, 0.31);
+    // border-image: linear-gradient(180deg, rgba(62, 62, 62, 0.31) 0%, rgba(62, 62, 62, 0.1643) 100%);
+    background: linear-gradient(180deg, rgba(62, 62, 62, 0.31) 0%, rgba(62, 62, 62, 0.1643) 100%);
+  
+    border-radius: 12px;
+    cursor: pointer;
+  
+    &:first-child {
+      flex-basis: calc((100% / 1) - 2rem);
+    }
   }
 }

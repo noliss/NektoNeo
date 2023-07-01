@@ -7,6 +7,7 @@ import computer4 from "../../images/cases/4.jpg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Button from "../Button";
+import classNames from "classnames";
 
 const Cases = () => {
   const cases = [
@@ -56,6 +57,7 @@ const Cases = () => {
         {cases.map((item, index) => {
           return (
             <div key={index} className={styles.casesItem}>
+              <p className={classNames(styles.casesNameMobile, [styles.casesName])}>{item.name}</p>
               <div className={styles.casesLeft}>
                 <img src={item.img} alt="" />
                 <p className={styles.casesAdvant}>{item.adv}</p>
@@ -71,7 +73,7 @@ const Cases = () => {
           );
         })}
       </div>
-      <Button className={styles.casesButton}>Заказать ПК</Button>
+      <Button className={styles.casesButton}>Показать ещё</Button>
     </>
   );
 };
