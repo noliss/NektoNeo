@@ -46,6 +46,7 @@
   color: rgba(67, 49, 121, 1);
   // text-shadow: -5px -5px rgba(67, 49, 121, 1);
   margin-bottom: 15px;
+  width: max-content;
 }
 
 .productContainer {
@@ -93,6 +94,30 @@
   filter: blur(50px);
 }
 
+.productPurpleShadow {
+  position: absolute;
+  left: 50%;
+  top: 90px;
+  transform: translateX(-50%);
+  width: 160px;
+  height: 120px;
+  background: rgba(148, 87, 225, 1);
+  opacity: 1;
+  filter: blur(50px);
+}
+
+.productGoldShadow {
+  position: absolute;
+  left: 50%;
+  top: 90px;
+  transform: translateX(-50%);
+  width: 160px;
+  height: 120px;
+  background: rgba(255, 195, 105, 1);
+  opacity: 1;
+  filter: blur(50px);
+}
+
 .productPlanet {
   position: absolute;
   right: 0;
@@ -124,6 +149,7 @@
   position: relative;
   z-index: 10;
   margin-top: 15px;
+  min-height: 323px;
 }
 
 .productStats {

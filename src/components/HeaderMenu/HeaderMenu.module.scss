@@ -9,20 +9,23 @@
 }
 
 .menuItem {
-  font-family: 'RS';
-  font-style: normal;
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 20px;
-  color: #FFFFFF;
-  margin-right: 37px;
-  transition: text-shadow .15s;
-  cursor: pointer;
-  &:last-child {
-    margin-right: 0;
-  }
-  &:hover {
-    text-shadow: 0 0 .9px #fff, 0 0 .9px #fff, 0 0 .9px #fff;
+  a {
+    text-decoration: none;
+    font-family: "RS";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 20px;
+    color: #ffffff;
+    margin-right: 37px;
+    transition: text-shadow 0.15s;
+    cursor: pointer;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      text-shadow: 0 0 0.9px #fff, 0 0 0.9px #fff, 0 0 0.9px #fff;
+    }
   }
 }
 
@@ -35,7 +38,7 @@
 }
 
 @media screen and (max-width: 768px) {
- .menu {
+  .menu {
     display: none;
- } 
+  }
 }

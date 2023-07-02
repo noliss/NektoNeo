@@ -3,39 +3,52 @@ import { useEffect, useState } from "react";
 import classNames from "classnames";
 
 const ProductsFilters = ({ onClick }) => {
-  const [price, setPrice] = useState("all");
+  const [price, setPrice] = useState({
+    minPrice: 'all',
+    maxPrice: 'all'
+  });
 
   useEffect(() => {
-    onClick(price);
-  }, [price]);
+    onClick({
+      minPrice: price.minPrice,
+      maxPrice: price.maxPrice
+    });
+  }, [price.minPrice, price.maxPrice]);
 
   const rangePrice = [
     {
-      type: "all",
+      minPrice: 'all',
+      maxPrice: 'all',
       title: "Все",
     },
     {
-      type: "42.000",
+      minPrice: "42.000",
+      maxPrice: "100.000",
       title: "42.000р - 100.000р",
     },
     {
-      type: "101.000",
+      minPrice: "100.000",
+      maxPrice: "150.000",
       title: "100.000р - 150.000р",
     },
     {
-      type: "100.000",
+      minPrice: "150.000",
+      maxPrice: "200.000",
       title: "150.000р - 200.000р",
     },
     {
-      type: "200.000",
+      minPrice: "200.000",
+      maxPrice: "250.000",
       title: "200.000р - 250.000р",
     },
     {
-      type: "250.000",
+      minPrice: "250.000",
+      maxPrice: "325.000",
       title: "250.000р - 325.000р",
     },
     {
-      type: "325.000",
+      minPrice: "325.000",
+      maxPrice: "450.000",
       title: "325.000р - 450.000р",
     },
   ];
@@ -46,10 +59,13 @@ const ProductsFilters = ({ onClick }) => {
         {rangePrice.map((item) => {
           return (
             <div
-              onClick={() => setPrice(item.type)}
+              onClick={() => setPrice({
+                minPrice: item.minPrice,
+                maxPrice: item.maxPrice
+              })}
               key={item.type}
               className={classNames(styles.productsFilterPriceItem, {
-                [styles.productsFilterPriceItemActive]: price === item.type,
+                [styles.productsFilterPriceItemActive]: price.minPrice === item.minPrice && price.maxPrice === item.maxPrice,
               })}
             >
               {item.title}

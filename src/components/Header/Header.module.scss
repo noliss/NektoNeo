@@ -34,6 +34,11 @@
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.headerMobileButton {
+  display: none;
+  z-index: 999;
+}
+
 @media screen and (max-width: 1230px) {
   .header {
     flex-direction: column;
@@ -50,12 +55,20 @@
 }
 
 @media screen and (max-width: 768px) {
-  
+  .headerMobileButton {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
   .headerLogo {
     width: 262px;
     height: 235px;
     max-width: none;
     max-height: none;
     margin-right: 0;
+  }
+  .headerMobileFixed {
+    position: fixed;
   }
 }

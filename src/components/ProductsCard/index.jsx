@@ -11,8 +11,28 @@ import { ReactComponent as CoolSVG } from "../../images/products/cool.svg";
 import classNames from "classnames";
 
 const ProductsCard = ({ title, image, forTo, devices, price }) => {
-  console.log(title, image);
+  const formattedPrice = parseInt(price.replace('.', ''));
   const productWhiteTheme = () => {
+    if (formattedPrice > 300000) {
+      return (
+        <>
+          <img src={light} className={styles.productGoldShadow} alt="light" />
+          <div className={styles.productPlanet} />
+          <div className={styles.productWide} />
+          <div className={styles.productSpeed} />
+        </>
+      );
+    }
+    if (formattedPrice > 100000) {
+      return (
+        <>
+          <img src={light} className={styles.productPurpleShadow} alt="light" />
+          <div className={styles.productPlanet} />
+          <div className={styles.productWide} />
+          <div className={styles.productSpeed} />
+        </>
+      );
+    }
     return (
       <>
         <img src={light} className={styles.productWhiteShadow} alt="light" />
@@ -43,19 +63,19 @@ const ProductsCard = ({ title, image, forTo, devices, price }) => {
                   <div className={styles.productStatsIcon}>
                     <CpuSVG width="22" height="22" />
                   </div>
-                  <p>Ryzen 5 5500</p>
+                  <p>{devices[0]}</p>
                 </div>
                 <div className={styles.productStatsItem}>
                   <div className={styles.productStatsIcon}>
                     <GpuSVG width="21" height="21" />
                   </div>
-                  <p>GTX 1650</p>
+                  <p>{devices[1]}</p>
                 </div>
                 <div className={styles.productStatsItem}>
                   <div className={styles.productStatsIcon}>
                     <RamSVG width="22" height="22" />
                   </div>
-                  <p>16GB DDR4</p>
+                  <p>{devices[2]}</p>
                 </div>
               </div>
               <div className={styles.productStatsColumn}>
@@ -63,19 +83,19 @@ const ProductsCard = ({ title, image, forTo, devices, price }) => {
                   <div className={styles.productStatsIcon}>
                     <DiskSVG width="15" height="20" />
                   </div>
-                  <p>2TB M2</p>
+                  <p>{devices[3]}</p>
                 </div>
                 <div className={styles.productStatsItem}>
                   <div className={styles.productStatsIcon}>
                     <CoolSVG width="19" height="19" />
                   </div>
-                  <p>AG200</p>
+                  <p>{devices[4]}</p>
                 </div>
                 <div className={styles.productStatsItem}>
                   <div className={styles.productStatsIcon}>
                     <WaltSVG width="17" height="17" />
                   </div>
-                  <p>500W</p>
+                  <p>{devices[5]}</p>
                 </div>
               </div>
             </div>
@@ -86,7 +106,7 @@ const ProductsCard = ({ title, image, forTo, devices, price }) => {
             <div className={styles.productCredit}>
               <p className={styles.productCreditTitle}>В кредит/рассрочку</p>
               <p className={styles.productCreditPrice}>
-                ОТ {price / 2} Р. В МЕСЯЦ
+                ОТ {((formattedPrice / 100 * 15.5) + (formattedPrice / 12)).toFixed(0)} Р. В МЕСЯЦ
               </p>
             </div>
             <Button className={styles.productBuy} type="pink">

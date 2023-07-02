@@ -21,7 +21,7 @@ import miniCross from "./images/backgrounds/miniCross.svg";
 const App = () => {
   return (
     <div className={styles.background}>
-      <section className={styles.mainBlock}>
+      <section id="main" className={styles.mainBlock}>
         <div className={styles.container}>
           <Header/>
         </div>
@@ -31,7 +31,7 @@ const App = () => {
           <NewsBlock />
         </div>
       </section>
-      <section className={styles.services}>
+      <section id="adv" className={styles.services}>
         <img className={styles.servicesLightRight} src={light} alt="Правое свечение" />
         <img className={styles.servicesLightLeft} src={light} alt="Левое свечение" />
         <div className={styles.container}>
@@ -39,7 +39,7 @@ const App = () => {
           <Services />
         </div>
       </section>
-      <section className={styles.products}>
+      <section id="prod" className={styles.products}>
         <div className={styles.container}>
           <Typography className={styles.productsTypography} type="h2" text="ЛУЧШЕЕ РЕШЕНИЕ ДЛЯ" />
           <Products/>
@@ -75,7 +75,7 @@ const App = () => {
           <Socials />
         </div>
       </section>
-      <section className={styles.cases}>
+      <section id="rev" className={styles.cases}>
         <div className={styles.container}>
           <Typography className={styles.productsTypography} type="h2" text="НАШИ КЕЙСЫ" />
           <Cases />
