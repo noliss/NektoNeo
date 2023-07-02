@@ -1,17 +1,20 @@
 import Button from "../Button";
 import styles from "./ProductsCard.module.scss";
 import light from "../../images/backgrounds/light.svg";
-import computer from "../../images/products/computer1.png";
 import { ReactComponent as CpuSVG } from "../../images/products/cpu.svg";
 import { ReactComponent as GpuSVG } from "../../images/products/gpu.svg";
 import { ReactComponent as RamSVG } from "../../images/products/ram.svg";
 import { ReactComponent as DiskSVG } from "../../images/products/disk.svg";
 import { ReactComponent as WaltSVG } from "../../images/products/walt.svg";
 import { ReactComponent as CoolSVG } from "../../images/products/cool.svg";
-import classNames from "classnames";
+import { goToLink } from "../../helpers/helpers";
 
 const ProductsCard = ({ title, image, forTo, devices, price }) => {
   const formattedPrice = parseInt(price.replace('.', ''));
+  const saveOnLocalStorage = (title) => {
+    localStorage.setItem('PC', title);
+    goToLink('#form', '_self');
+  }
   const productWhiteTheme = () => {
     if (formattedPrice > 300000) {
       return (
@@ -109,7 +112,7 @@ const ProductsCard = ({ title, image, forTo, devices, price }) => {
                 ОТ {((formattedPrice / 100 * 15.5) + (formattedPrice / 12)).toFixed(0)} Р. В МЕСЯЦ
               </p>
             </div>
-            <Button className={styles.productBuy} type="pink">
+            <Button className={styles.productBuy} type="pink" onClick={() => saveOnLocalStorage(title)}>
               Купить
             </Button>
           </div>

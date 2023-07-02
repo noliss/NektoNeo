@@ -1,6 +1,7 @@
 import styles from "./Gifts.module.scss";
 import computerPhoto from "../../images/gifts/screen.png";
 import Button from "../Button";
+import { goToLink } from "../../helpers/helpers";
 
 const Gifts = () => {
   return (
@@ -26,7 +27,7 @@ const Gifts = () => {
         </div>
         <img src={computerPhoto} alt="Фирменные девайсы" />
       </div>
-      <Button type="pink" className={styles.giftsButton}>
+      <Button type="pink" onClick={() => goToLink('#form', '_self')} className={styles.giftsButton}>
         Заказать пк
       </Button>
     </>

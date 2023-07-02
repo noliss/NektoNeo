@@ -1,5 +1,5 @@
 import styles from "./Footer.module.scss";
-import { ReactComponent as LogoSVG } from '../../images/svg/logo.svg'
+import logo from '../../images/svg/logo.svg'
 
 const Footer = () => {
   return (
@@ -13,7 +13,7 @@ const Footer = () => {
         </p>
       </div>
       <div className={styles.footerColumn}>
-        <LogoSVG className={styles.footerLogo} />
+        <img src={logo} alt="логотип" className={styles.footerLogo} />
       </div>
       <div className={styles.footerColumn}>
         <div className={styles.footerPhone}>

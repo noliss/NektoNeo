@@ -1,7 +1,8 @@
 import styles from "./HeaderMobileMenu.module.scss";
 import classNames from "classnames";
-import { ReactComponent as LogoSVG } from "../../images/svg/logo.svg";
+import logo from "../../images/svg/logo.svg";
 import Button from "../Button";
+import { goToLink } from '../../helpers/helpers';
 
 const HeaderMobileMenu = ({ menuItems, isShow, onClick }) => {
   return (
@@ -10,15 +11,24 @@ const HeaderMobileMenu = ({ menuItems, isShow, onClick }) => {
         [styles.mobileMenuActive]: isShow,
       })}
     >
-      <LogoSVG className={styles.mobileMenuLogo} />
+      <img src={logo} alt="логотип" className={styles.mobileMenuLogo} />
       <ul className={styles.mobileMenuList}>
         {menuItems.map((item) => (
           <li key={item.name} className={styles.mobileMenuItem}>
-            <a href={item.link} onClick={() => onClick(!isShow)}>{item.name}</a>
+            <a href={item.link} onClick={() => onClick(!isShow)}>
+              {item.name}
+            </a>
           </li>
         ))}
       </ul>
-      <Button className={styles.mobileMenuButton}>Менеджер</Button>
+      <Button
+        onClick={() => {
+          goToLink("https://t.me/vapc_m");
+        }}
+        className={styles.mobileMenuButton}
+      >
+        Менеджер
+      </Button>
     </div>
   );
 };

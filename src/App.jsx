@@ -1,7 +1,8 @@
 import { Header } from "./components/Header";
-import './styles/reset.scss';
-import './styles/global.scss';
-import styles from "./App.module.scss"
+import { Animate, AnimateKeyframes, AnimateGroup } from "react-simple-animate";
+import "./styles/reset.scss";
+import "./styles/global.scss";
+import styles from "./App.module.scss";
 import NewsBlock from "./components/NewsBlock";
 import Typography from "./components/Typography/Typography";
 import Services from "./components/Services";
@@ -17,88 +18,229 @@ import Form from "./components/Form";
 import Footer from "./components/Footer";
 import light from "./images/backgrounds/light.svg";
 import miniCross from "./images/backgrounds/miniCross.svg";
+import { motion } from "framer-motion";
 
 const App = () => {
+  const defaultBlockAnimation = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0.1,
+      },
+    },
+  };
   return (
     <div className={styles.background}>
-      <section id="main" className={styles.mainBlock}>
+      <motion.section
+        variants={defaultBlockAnimation}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        id="main"
+        className={styles.mainBlock}
+      >
         <div className={styles.container}>
-          <Header/>
+          <Header />
         </div>
-      </section>
-      <section className={styles.newsBlock}>
+      </motion.section>
+      <motion.section
+        variants={defaultBlockAnimation}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className={styles.newsBlock}
+      >
         <div className={styles.container}>
           <NewsBlock />
         </div>
-      </section>
-      <section id="adv" className={styles.services}>
-        <img className={styles.servicesLightRight} src={light} alt="Правое свечение" />
-        <img className={styles.servicesLightLeft} src={light} alt="Левое свечение" />
+      </motion.section>
+      <motion.section
+        variants={defaultBlockAnimation}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        id="adv"
+        className={styles.services}
+      >
+        <img
+          className={styles.servicesLightRight}
+          src={light}
+          alt="Правое свечение"
+        />
+        <img
+          className={styles.servicesLightLeft}
+          src={light}
+          alt="Левое свечение"
+        />
         <div className={styles.container}>
-          <Typography className={styles.servicesTitle} type="h2" text="НАШИ УСЛУГИ" />
+          <Typography
+            className={styles.servicesTitle}
+            type="h2"
+            text="НАШИ УСЛУГИ"
+          />
           <Services />
         </div>
-      </section>
-      <section id="prod" className={styles.products}>
-        <div className={styles.container}>
-          <Typography className={styles.productsTypography} type="h2" text="ЛУЧШЕЕ РЕШЕНИЕ ДЛЯ" />
-          <Products/>
-        </div>
-      </section>
-      <section className={styles.payment}>
+      </motion.section>
+      <motion.section
+        variants={defaultBlockAnimation}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        id="prod"
+        className={styles.products}
+      >
+        <Animate play start={{ opacity: 0 }} end={{ opacity: 1 }}>
+          <div className={styles.container}>
+            <Typography
+              className={styles.productsTypography}
+              type="h2"
+              text="ЛУЧШЕЕ РЕШЕНИЕ ДЛЯ"
+            />
+            <Products />
+          </div>
+        </Animate>
+      </motion.section>
+      <motion.section
+        variants={defaultBlockAnimation}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className={styles.payment}
+      >
         <div className={styles.container}>
           <Payment />
         </div>
-      </section>
-      <section className={styles.steps}>
+      </motion.section>
+      <motion.section
+        variants={defaultBlockAnimation}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className={styles.steps}
+      >
         <div className={styles.container}>
-          <img className={styles.stepsMiniCross} src={miniCross} alt="крестик" />
-          <Typography className={styles.stepsTypography} type="h2" text="ЭТАПЫ РАБОТЫ" />
+          <img
+            className={styles.stepsMiniCross}
+            src={miniCross}
+            alt="крестик"
+          />
+          <Typography
+            className={styles.stepsTypography}
+            type="h2"
+            text="ЭТАПЫ РАБОТЫ"
+          />
           <Stages />
         </div>
-      </section>
-      <section className={styles.gifts}>
+      </motion.section>
+      <motion.section
+        variants={defaultBlockAnimation}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className={styles.gifts}
+      >
         <div className={styles.container}>
-          <Typography className={styles.giftsTypography} type="h2" text="ВМЕСТЕ С ПК ВЫ ПОЛУЧИТЕ" />
+          <Typography
+            className={styles.giftsTypography}
+            type="h2"
+            text="ВМЕСТЕ С ПК ВЫ ПОЛУЧИТЕ"
+          />
           <Gifts />
         </div>
-      </section>
-      <section className={styles.advantages}>
+      </motion.section>
+      <motion.section
+        variants={defaultBlockAnimation}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className={styles.advantages}
+      >
         <div className={styles.container}>
-          <Typography className={styles.advantagesTypography} type="h2" text="НАШИ ПРЕИМУЩЕСТВА" />
+          <Typography
+            className={styles.advantagesTypography}
+            type="h2"
+            text="НАШИ ПРЕИМУЩЕСТВА"
+          />
           <Advantages />
         </div>
-      </section>
-      <section className={styles.social}>
+      </motion.section>
+      <motion.section
+        variants={defaultBlockAnimation}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className={styles.social}
+      >
         <div className={styles.container}>
-          <Typography className={styles.socialTypography} type="h2" text="НАШИ СОЦИАЛЬНЫЕ СЕТИ" />
+          <Typography
+            className={styles.socialTypography}
+            type="h2"
+            text="НАШИ СОЦИАЛЬНЫЕ СЕТИ"
+          />
           <Socials />
         </div>
-      </section>
-      <section id="rev" className={styles.cases}>
+      </motion.section>
+      <motion.section
+        variants={defaultBlockAnimation}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        id="rev"
+        className={styles.cases}
+      >
         <div className={styles.container}>
-          <Typography className={styles.productsTypography} type="h2" text="НАШИ КЕЙСЫ" />
+          <Typography
+            className={styles.productsTypography}
+            type="h2"
+            text="НАШИ КЕЙСЫ"
+          />
           <Cases />
         </div>
-      </section>
-      <section className={styles.live}>
+      </motion.section>
+      <motion.section
+        variants={defaultBlockAnimation}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className={styles.live}
+      >
         <div className={styles.container}>
-          <Typography className={styles.productsTypography} type="h2" text="LIVE ЛЕНТА" />
+          <Typography
+            className={styles.productsTypography}
+            type="h2"
+            text="LIVE ЛЕНТА"
+          />
           <Live />
         </div>
-      </section>
-      <section className={styles.form}>
+      </motion.section>
+      <motion.section
+        variants={defaultBlockAnimation}
+        id="form"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className={styles.form}
+      >
         <div className={styles.container}>
           <Form />
         </div>
-      </section>
-      <section className={styles.footer}>
+      </motion.section>
+      <motion.section
+        variants={defaultBlockAnimation}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className={styles.footer}
+      >
         <div className={styles.container}>
           <Footer />
         </div>
-      </section>
+      </motion.section>
     </div>
   );
-}
+};
 
 export default App;

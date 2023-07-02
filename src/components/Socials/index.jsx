@@ -9,40 +9,46 @@ const Socials = () => {
   const socialItems = [
     {
       img: <DzenSVG />,
-      link: '#',
-      desc: '',
-      alt: 'Дзен'
+      link: "https://dzen.ru/vapcbuild",
+      desc: "",
+      alt: "Дзен",
     },
     {
       img: <InstSVG />,
-      link: '#',
-      desc: 'Meta признана экстремистской организацией на территории РФ',
-      alt: 'Инстаграм'
+      link: "https://instagram.com/vapcbuild",
+      desc: "Meta признана экстремистской организацией на территории РФ",
+      alt: "Инстаграм",
     },
     {
       img: <YtSVG />,
-      link: '#',
-      desc: '',
-      alt: 'Ютуб'
+      link: "https://www.youtube.com/@vapcbuild",
+      desc: "",
+      alt: "Ютуб",
     },
     {
       img: <TgSVG />,
-      link: '#',
-      desc: '',
-      alt: 'Телеграм'
+      link: "https://t.me/vapcbuild",
+      desc: "",
+      alt: "Телеграм",
     },
     {
       img: <VkSVG />,
-      link: '#',
-      desc: '',
-      alt: 'Вконтакте'
+      link: "https://vk.com/vapcbuild",
+      desc: "",
+      alt: "Вконтакте",
     },
   ];
   return (
     <div className={styles.socilas}>
       {socialItems.map((item, index) => {
         return (
-          <a key={index} aria-label={item.alt} href={item.link} className={styles.socialsItem}>
+          <a
+            key={index}
+            target="_blank"
+            aria-label={item.alt}
+            href={item.link}
+            className={styles.socialsItem}
+          >
             {item.img}
             <div className={styles.socialItemDesc}>{item.desc}</div>
           </a>
