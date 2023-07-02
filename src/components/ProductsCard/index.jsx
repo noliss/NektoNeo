@@ -9,7 +9,7 @@ import { ReactComponent as WaltSVG } from "../../images/products/walt.svg";
 import { ReactComponent as CoolSVG } from "../../images/products/cool.svg";
 import { goToLink } from "../../helpers/helpers";
 
-const ProductsCard = ({ title, image, forTo, devices, price }) => {
+const ProductsCard = ({ title, image, forTo, devices, price, key }) => {
   const formattedPrice = parseInt(price.replace('.', ''));
   const saveOnLocalStorage = (title) => {
     localStorage.setItem('PC', title);
@@ -46,7 +46,7 @@ const ProductsCard = ({ title, image, forTo, devices, price }) => {
     );
   };
   return (
-    <div className={styles.product}>
+    <div className={styles.product} key={key}>
       <div className={styles.productWidth}>
         <p className={styles.productTitle}>{title}</p>
         <p className={styles.productTitleShadow}>{title}</p>

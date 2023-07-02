@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Button from "../Button";
 import classNames from "classnames";
+import { goToLink } from "../../helpers/helpers";
 
 const Cases = () => {
   const cases = [
@@ -73,7 +74,7 @@ const Cases = () => {
           );
         })}
       </div>
-      <Button className={styles.casesButton}>Показать ещё</Button>
+      <Button onClick={() => goToLink('https://vk.com/topic-218975719_49337252')} className={styles.casesButton}>Показать ещё</Button>
     </>
   );
 };

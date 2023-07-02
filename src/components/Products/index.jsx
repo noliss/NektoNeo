@@ -23,7 +23,6 @@ const Products = () => {
 
   const selectedFilter = useCallback((price) => {
     setShowProducts(false)
-    console.log(filteredProducts);
     if (price.minPrice === "all" && price.maxPrice === "all") {
       return setFilteredProducts([...products]);
     }
@@ -46,6 +45,7 @@ const Products = () => {
           {isShowProducts && filteredProducts.slice(0, visibleProducts).map((item, index) => (
             <>
               <Animate
+                key={item.id}
                 easeType="linear"
                 play={filteredProducts}
                 start={{ opacity: 0 }}
@@ -53,7 +53,7 @@ const Products = () => {
                 end={{ opacity: 1 }}
               >
                 <ProductsCard
-                  key={item.title}
+                  // key={item.id}
                   title={item.title}
                   image={item.img}
                   forTo={item.forTo}

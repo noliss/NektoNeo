@@ -23,6 +23,19 @@ import eclipse from '../images/products/eclipse.png'
 import eagle from '../images/products/eagle.png'
 import master from '../images/products/master.png'
 import ultra from '../images/products/ultra.png'
+import rose from '../images/products/rose.png'
+import electraR from '../images/products/electraR.png'
+import pulseR from '../images/products/pulseR.png'
+import cyber from '../images/products/cyber.png'
+import vanguardR from '../images/products/vanguardR.png'
+import astral from '../images/products/astral.png'
+import prism from '../images/products/prism.png'
+import alpha from '../images/products/alpha.png'
+import synergyX from '../images/products/synergyX.png'
+import vandguardMini from '../images/products/vanguardMini.png'
+import aero from '../images/products/aero.png'
+import synergy from '../images/products/synergy.png'
+import vandguard2 from '../images/products/vanguard2.png'
 
 export const products = [
   {
@@ -192,5 +205,100 @@ export const products = [
     img: ultra,
     devices: ['i5-13900KF', 'RTX 4090', '64GB DDR5', '2TB', 'II 360', '1200W'],
     price: '464.900',
+  },
+  {
+    id: 25,
+    title: 'VA ROSE',
+    img: rose,
+    devices: ['i3-12100F', 'GTX 1650', '16GB DDR4', '240GB', 'AG200', '500W'],
+    price: '49.000',
+  },
+  {
+    id: 26,
+    title: 'VA ELECT. R+',
+    img: electraR,
+    devices: ['Ryzen 5 5500', 'RTX 2060', '16GB DDR4', '512GB M2', 'SE-224-XTS', '600W'],
+    price: '75.000',
+  },
+  {
+    id: 27,
+    title: 'VA PULSE R+',
+    img: pulseR,
+    devices: ['Ryzen 5 5500', 'RTX 3060', '16GB DDR4', '512GB M2', 'SE-224-XTS', '750W'],
+    price: '82.200',
+  },
+  {
+    id: 28,
+    title: 'VA CYBER',
+    img: cyber,
+    devices: ['Ryzen 5 5600', 'RTX 3060', '32GB DDR4', '512GB M2', 'SE-224-XTS', '750W'],
+    price: '89.400',
+  },
+  {
+    id: 29,
+    title: 'VA VANG. R',
+    img: vanguardR,
+    devices: ['Ryzen 5 5500', 'RTX 3060 TI', '32GB DDR4', '512GB M2', 'SE-224-XTS', '750W'],
+    price: '90.500',
+  },
+  {
+    id: 30,
+    title: 'VA ASTRAL',
+    img: astral,
+    devices: ['Ryzen 5 5600', 'RTX 3060 TI', '32GB DDR4', '512GB M2', 'SE-224-XTS', '750W'],
+    price: '97.700',
+  },
+  {
+    id: 31,
+    title: 'VA PRISM',
+    img: prism,
+    devices: ['Ryzen 5 5600', 'RTX 3070 ОС', '32GB DDR4', '512GB M2', 'SE-224-XTS', '750W'],
+    price: '102.900',
+  },
+  {
+    id: 32,
+    title: 'VA ALPHA',
+    img: alpha,
+    devices: ['i5-13400f', 'RTX 4070 TI', '32GB DDR4', '1TB M2', 'SE-224-XTS', '750W'],
+    price: '156.000',
+  },
+  {
+    id: 33,
+    title: 'VA SYN. X',
+    img: synergyX,
+    devices: ['I5-13600KF', 'RTX 4070 TI', '32GB DDR5', '2TB', 'L360', '750W'],
+    price: '186.200',
+  },
+  {
+    id: 34,
+    title: 'VA VANG. MINI',
+    img: vandguardMini,
+    devices: ['I5-12400f', 'RTX 3060 TI', '32GB DDR4', '512GB', 'L240', '750W'],
+    price: '108.200',
+  },
+  {
+    id: 35,
+    title: 'VA AERO',
+    img: aero,
+    devices: ['i7-13700KF', 'RTX 4070 TI', '32GB DDR4', '1TB M2', 'LT720', '850W'],
+    price: '202.800',
+  },
+  {
+    id: 36,
+    title: 'VA SYNERGY',
+    img: synergy,
+    devices: ['i5-13500', 'RTX 4080', '32GB DDR5', '1TB M2', 'L360', '850W'],
+    price: '206.900',
+  },
+  {
+    id: 37,
+    title: 'VA VANG. 2',
+    img: vandguard2,
+    devices: ['I5-13400f', 'RTX 4070 TI', '32GB DDR4', '512GB M2', 'SE-224-XTS', '750W'],
+    price: '149.700',
   }
-]
+].sort((a, b) => {
+  const formattedPriceA = parseInt(a.price.replace('.', ''));
+  const formattedPriceB = parseInt(b.price.replace('.', ''));
+  return formattedPriceA - formattedPriceB
+})

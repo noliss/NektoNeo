@@ -4,21 +4,21 @@ import classNames from "classnames";
 
 const ProductsFilters = ({ onClick }) => {
   const [price, setPrice] = useState({
-    minPrice: 'all',
-    maxPrice: 'all'
+    minPrice: "all",
+    maxPrice: "all",
   });
 
   useEffect(() => {
     onClick({
       minPrice: price.minPrice,
-      maxPrice: price.maxPrice
+      maxPrice: price.maxPrice,
     });
   }, [price.minPrice, price.maxPrice]);
 
   const rangePrice = [
     {
-      minPrice: 'all',
-      maxPrice: 'all',
+      minPrice: "all",
+      maxPrice: "all",
       title: "Все",
     },
     {
@@ -55,17 +55,21 @@ const ProductsFilters = ({ onClick }) => {
   return (
     <div className={styles.productsFilters}>
       <div className={styles.productsFilterPrice}>
-      <div className={styles.productFilterMobileTitle}>Цена</div>
+        <div className={styles.productFilterMobileTitle}>Цена</div>
         {rangePrice.map((item) => {
           return (
             <div
-              onClick={() => setPrice({
-                minPrice: item.minPrice,
-                maxPrice: item.maxPrice
-              })}
-              key={item.type}
+              onClick={() =>
+                setPrice({
+                  minPrice: item.minPrice,
+                  maxPrice: item.maxPrice,
+                })
+              }
+              key={item.price}
               className={classNames(styles.productsFilterPriceItem, {
-                [styles.productsFilterPriceItemActive]: price.minPrice === item.minPrice && price.maxPrice === item.maxPrice,
+                [styles.productsFilterPriceItemActive]:
+                  price.minPrice === item.minPrice &&
+                  price.maxPrice === item.maxPrice,
               })}
             >
               {item.title}

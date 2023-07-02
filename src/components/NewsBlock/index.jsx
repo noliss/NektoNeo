@@ -7,9 +7,9 @@ const NewsBlock = () => {
   return (
     <div className={styles.content}>
       <Slider arrows={false} autoplay>
-        <div>БЛОК С НОВОСТЯМИ</div>
-        <div>БЛО2 С НОВОСТЯМИ</div>
-        <div>БЛО3 С НОВОСТЯМИ</div>
+        <div>НОВОСТЬ</div>
+        <div>НОВОСТЬ</div>
+        <div>НОВОСТЬ</div>
       </Slider>
     </div>
   )

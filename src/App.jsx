@@ -19,6 +19,8 @@ import Footer from "./components/Footer";
 import light from "./images/backgrounds/light.svg";
 import miniCross from "./images/backgrounds/miniCross.svg";
 import { motion } from "framer-motion";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   const defaultBlockAnimation = {
@@ -34,6 +36,7 @@ const App = () => {
   };
   return (
     <div className={styles.background}>
+      <ToastContainer />
       <motion.section
         variants={defaultBlockAnimation}
         initial="hidden"
