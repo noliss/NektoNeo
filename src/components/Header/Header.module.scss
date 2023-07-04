@@ -6,10 +6,28 @@
 }
 
 .headerLogo {
+  position: relative;
   max-height: 148px;
   max-width: 179px;
   width: 179px;
+}
+
+.headerLogoCtn {
   margin-right: 20px;
+  position: relative;
+  &::before {
+    content: "";
+    width: 50px;
+    height: 47px;
+    background-color: white;
+    position: absolute;
+    left: 62px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ffffff;
+    opacity: 1;
+    filter: blur(32px);
+  }
 }
 
 .headerLeft {
@@ -22,15 +40,15 @@
   padding: 15px 14px;
   max-height: 47px;
   // background: linear-gradient(180deg, rgba(62, 62, 62, 0.31) 0%, rgba(62, 62, 62, 0.1643) 100%);
-  border-radius: 16px;  
-  font-family: 'RS';
+  border-radius: 16px;
+  font-family: "RS";
   font-style: normal;
   font-weight: 800;
   font-size: 16.9704px;
   line-height: 17px;
   text-align: center;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #ffffff;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -60,6 +78,12 @@
     position: absolute;
     top: 20px;
     right: 20px;
+    width: 40px;
+    height: 40px;
+    svg {
+      width: 40px;
+      height: 40px;
+    }
   }
   .headerLogo {
     width: 262px;
@@ -70,5 +94,14 @@
   }
   .headerMobileFixed {
     position: fixed;
+  }
+  .headerLogoCtn {
+    margin-right: 0;
+    &::before {
+      width: 71px;
+      height: 71px;
+      left: 97px;
+      filter: blur(42px);
+    }
   }
 }

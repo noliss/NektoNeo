@@ -9,7 +9,19 @@ import classNames from "classnames";
 import { toast } from "react-toastify";
 
 const Form = () => {
+  const [formError, setFormErrors] = useState({
+    name: "",
+    phone: "",
+    email: "",
+  });
+  const [form, setForm] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    product: null,
+  });
   const sendMail = async () => {
+    const localStoragePc = localStorage.getItem("PC");
     if (!form.name.length) {
       toast.error("Укажите имя");
       return setFormErrors({
@@ -39,24 +51,12 @@ const Form = () => {
     toast.success("Сообщение успешно отправлено!");
     await fetch("/sendMail", {
       method: "POST",
-      body: JSON.stringify(form),
+      body: JSON.stringify({...form, product: localStoragePc}),
       headers: {
         "Content-Type": "application/json",
       },
     });
   };
-
-  const [formError, setFormErrors] = useState({
-    name: "",
-    phone: "",
-    email: "",
-  });
-  const [form, setForm] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    product: localStorage.getItem("PC"),
-  });
 
   return (
     <div className={styles.form}>

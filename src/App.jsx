@@ -21,8 +21,16 @@ import miniCross from "./images/backgrounds/miniCross.svg";
 import { motion } from "framer-motion";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useEffect, useState, useRef } from "react";
 
 const App = () => {
+  const windowSize = useRef([window.innerWidth, window.innerHeight]);
+  const [isMobile, updateIsMobile] = useState(false);
+  useEffect(() => {
+    updateIsMobile(windowSize.current[0] < 1024);
+    return (() => window.localStorage.removeItem('PC'));
+  }, [])
+
   const defaultBlockAnimation = {
     hidden: {
       opacity: 0,
@@ -33,14 +41,17 @@ const App = () => {
         delay: 0.1,
       },
     },
-  };
+    onlyVisible: {
+      opacity: 1,
+    }
+  }
   return (
-    <div className={styles.background}>
+    <div className={styles.main}>
       <ToastContainer />
       <motion.section
         variants={defaultBlockAnimation}
-        initial="hidden"
-        whileInView="visible"
+        initial={!isMobile ? 'hidden' : 'onlyVisible'}
+        whileInView={!isMobile ? 'visible' : 'onlyVisible'}
         viewport={{ once: true }}
         id="main"
         className={styles.mainBlock}
@@ -51,8 +62,8 @@ const App = () => {
       </motion.section>
       <motion.section
         variants={defaultBlockAnimation}
-        initial="hidden"
-        whileInView="visible"
+        initial={!isMobile ? 'hidden': 'onlyVisible'}
+        whileInView={!isMobile ? 'visible': 'onlyVisible'}
         viewport={{ once: true }}
         className={styles.newsBlock}
       >
@@ -62,8 +73,8 @@ const App = () => {
       </motion.section>
       <motion.section
         variants={defaultBlockAnimation}
-        initial="hidden"
-        whileInView="visible"
+        initial={!isMobile ? 'hidden': 'onlyVisible'}
+        whileInView={!isMobile ? 'visible': 'onlyVisible'}
         viewport={{ once: true }}
         id="adv"
         className={styles.services}
@@ -89,8 +100,8 @@ const App = () => {
       </motion.section>
       <motion.section
         variants={defaultBlockAnimation}
-        initial="hidden"
-        whileInView="visible"
+        initial={!isMobile ? 'hidden': 'onlyVisible'}
+        whileInView={!isMobile ? 'visible': 'onlyVisible'}
         viewport={{ once: true }}
         id="prod"
         className={styles.products}
@@ -108,8 +119,8 @@ const App = () => {
       </motion.section>
       <motion.section
         variants={defaultBlockAnimation}
-        initial="hidden"
-        whileInView="visible"
+        initial={!isMobile ? 'hidden': 'onlyVisible'}
+        whileInView={!isMobile ? 'visible': 'onlyVisible'}
         viewport={{ once: true }}
         className={styles.payment}
       >
@@ -119,8 +130,8 @@ const App = () => {
       </motion.section>
       <motion.section
         variants={defaultBlockAnimation}
-        initial="hidden"
-        whileInView="visible"
+        initial={!isMobile ? 'hidden': 'onlyVisible'}
+        whileInView={!isMobile ? 'visible': 'onlyVisible'}
         viewport={{ once: true }}
         className={styles.steps}
       >
@@ -140,8 +151,8 @@ const App = () => {
       </motion.section>
       <motion.section
         variants={defaultBlockAnimation}
-        initial="hidden"
-        whileInView="visible"
+        initial={!isMobile ? 'hidden': 'onlyVisible'}
+        whileInView={!isMobile ? 'visible': 'onlyVisible'}
         viewport={{ once: true }}
         className={styles.gifts}
       >
@@ -156,8 +167,8 @@ const App = () => {
       </motion.section>
       <motion.section
         variants={defaultBlockAnimation}
-        initial="hidden"
-        whileInView="visible"
+        initial={!isMobile ? 'hidden': 'onlyVisible'}
+        whileInView={!isMobile ? 'visible': 'onlyVisible'}
         viewport={{ once: true }}
         className={styles.advantages}
       >
@@ -172,8 +183,8 @@ const App = () => {
       </motion.section>
       <motion.section
         variants={defaultBlockAnimation}
-        initial="hidden"
-        whileInView="visible"
+        initial={!isMobile ? 'hidden': 'onlyVisible'}
+        whileInView={!isMobile ? 'visible': 'onlyVisible'}
         viewport={{ once: true }}
         className={styles.social}
       >
@@ -188,8 +199,8 @@ const App = () => {
       </motion.section>
       <motion.section
         variants={defaultBlockAnimation}
-        initial="hidden"
-        whileInView="visible"
+        initial={!isMobile ? 'hidden': 'onlyVisible'}
+        whileInView={!isMobile ? 'visible': 'onlyVisible'}
         viewport={{ once: true }}
         id="rev"
         className={styles.cases}
@@ -205,8 +216,8 @@ const App = () => {
       </motion.section>
       <motion.section
         variants={defaultBlockAnimation}
-        initial="hidden"
-        whileInView="visible"
+        initial={!isMobile ? 'hidden': 'onlyVisible'}
+        whileInView={!isMobile ? 'visible': 'onlyVisible'}
         viewport={{ once: true }}
         className={styles.live}
       >
@@ -222,8 +233,8 @@ const App = () => {
       <motion.section
         variants={defaultBlockAnimation}
         id="form"
-        initial="hidden"
-        whileInView="visible"
+        initial={!!isMobile && 'hidden'}
+        whileInView={!!isMobile && 'visible'}
         viewport={{ once: true }}
         className={styles.form}
       >
@@ -233,8 +244,8 @@ const App = () => {
       </motion.section>
       <motion.section
         variants={defaultBlockAnimation}
-        initial="hidden"
-        whileInView="visible"
+        initial={!!isMobile && 'hidden'}
+        whileInView={!!isMobile && 'visible'}
         viewport={{ once: true }}
         className={styles.footer}
       >

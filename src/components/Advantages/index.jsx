@@ -3,7 +3,7 @@ import { ReactComponent as ChampSVG } from "../../images/advantages/1.svg";
 import { ReactComponent as StarSVG } from "../../images/advantages/2.svg";
 import { ReactComponent as PipleSVG } from "../../images/advantages/3.svg";
 import { ReactComponent as AutoSVG } from "../../images/advantages/4.svg";
-import { ReactComponent as PriseSVG } from "../../images/advantages/2.svg";
+import { ReactComponent as PriseSVG } from "../../images/advantages/5.svg";
 import { ReactComponent as GiftSVG } from "../../images/advantages/6.svg";
 
 const Advantages = () => {
@@ -38,6 +38,7 @@ const Advantages = () => {
     },
     {
       icon: <GiftSVG />,
+      title: 'Акции, скидки, подарки',
       desc: `Компания VA-PC гарантирует качество своих компьютеров, используя только сертифицированные компоненты от таких производителей, как
       INTEL, AMD, ASUS, GIGABYTE, NVIDIA`,
     },
@@ -46,7 +47,9 @@ const Advantages = () => {
     <div className={styles.advantages}>
       {advList.map((item, index) => {
         return <div key={index} className={styles.advantagesItem}>
-          {item.icon}
+          <div className={styles.advantagesIcon}>
+              {item.icon}
+          </div>
           <p className={styles.advantagesItemTitle}>{item.title}</p>
           <p className={styles.advantagesItemDesc}>{item.desc}</p>
         </div>;

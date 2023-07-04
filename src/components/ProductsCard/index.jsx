@@ -12,6 +12,7 @@ import { goToLink } from "../../helpers/helpers";
 const ProductsCard = ({ title, image, forTo, devices, price, key }) => {
   const formattedPrice = parseInt(price.replace('.', ''));
   const saveOnLocalStorage = (title) => {
+    console.log(title);
     localStorage.setItem('PC', title);
     goToLink('#form', '_self');
   }

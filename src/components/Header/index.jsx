@@ -32,7 +32,9 @@ export const Header = () => {
           isShow={mobileMenu}
           menuItems={menuItems}
         />
-        <img src={logo} alt="логотип" className={styles.headerLogo} />
+        <div className={styles.headerLogoCtn}>
+            <img src={logo} alt="логотип" className={styles.headerLogo} />
+        </div>
         <HeaderMenu menuItems={menuItems} />
       </div>
       <Button

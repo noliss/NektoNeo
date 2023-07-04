@@ -11,7 +11,9 @@ const HeaderMobileMenu = ({ menuItems, isShow, onClick }) => {
         [styles.mobileMenuActive]: isShow,
       })}
     >
-      <img src={logo} alt="логотип" className={styles.mobileMenuLogo} />
+      <div className={styles.headerLogoCtn}>
+        <img src={logo} alt="логотип" className={styles.mobileMenuLogo} />
+      </div>
       <ul className={styles.mobileMenuList}>
         {menuItems.map((item) => (
           <li key={item.name} className={styles.mobileMenuItem}>

@@ -2,7 +2,7 @@
   "name": "nekto-neo",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://45.141.76.200:8080/",
+  "proxy": "http://localhost:8080/",
   "dependencies": {
     "classnames": "^2.3.2",
     "framer-motion": "^10.12.18",
