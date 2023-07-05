@@ -49,22 +49,62 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  width: 220px;
-  height: 220px;
+  width: 304px;
+    height: 304px;
   background: #ffffff;
   opacity: 1;
-  filter: blur(339px);
+  filter: blur(243px);
+  -webkit-filter: blur(243px);
+  -ms-filter: blur(243px);
+  // filter: url("data:image/svg+xml;utf9,<svg%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'><filter%20id='blur'><feGaussianBlur%20stdDeviation='3'%20/></filter></svg>#blur");
+  filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='243'); 
 }
 
 .servicesLightLeft {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 220px;
-  height: 220px;
+  width: 304px;
+    height: 304px;
   background: #ffffff;
   opacity: 1;
-  filter: blur(339px);
+  filter: blur(243px);
+  -webkit-filter: blur(243px);
+  -ms-filter: blur(243px);
+  // filter: url("data:image/svg+xml;utf9,<svg%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'><filter%20id='blur'><feGaussianBlur%20stdDeviation='3'%20/></filter></svg>#blur");
+  filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='243'); 
+}
+
+@-moz-document url-prefix()
+{
+  .servicesLightRight {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 487px;
+    height: 450px;
+    background: #ffffff;
+    opacity: 0.1;
+    filter: blur(204px);
+    -webkit-filter: blur(200px);
+    -ms-filter: blur(200px);
+    // filter: url("data:image/svg+xml;utf9,<svg%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'><filter%20id='blur'><feGaussianBlur%20stdDeviation='3'%20/></filter></svg>#blur");
+    filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='243'); 
+  }
+  .servicesLightLeft {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 487px;
+    height: 450px;
+    background: #ffffff;
+    opacity: 0.1;
+    filter: blur(204px);
+    -webkit-filter: blur(200px);
+    -ms-filter: blur(200px);
+    // filter: url("data:image/svg+xml;utf9,<svg%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'><filter%20id='blur'><feGaussianBlur%20stdDeviation='3'%20/></filter></svg>#blur");
+    filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='243'); 
+  }
 }
 
 .social {

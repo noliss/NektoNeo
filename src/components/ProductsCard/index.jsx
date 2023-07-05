@@ -10,12 +10,17 @@ import { ReactComponent as CoolSVG } from "../../images/products/cool.svg";
 import { goToLink } from "../../helpers/helpers";
 
 const ProductsCard = ({ title, image, forTo, devices, price, key }) => {
-  const formattedPrice = parseInt(price.replace('.', ''));
+  const formattedPrice = parseInt(price.replace(".", ""));
   const saveOnLocalStorage = (title) => {
     console.log(title);
-    localStorage.setItem('PC', title);
-    goToLink('#form', '_self');
-  }
+    localStorage.setItem("PC", title);
+    goToLink("#form", "_self");
+  };
+  const roundToNearest = (num) => {
+    const nearest = 100;
+    const roundedNum = Math.ceil(num / nearest) * nearest;
+    return roundedNum;
+  };
   const productWhiteTheme = () => {
     if (formattedPrice > 300000) {
       return (
@@ -53,11 +58,7 @@ const ProductsCard = ({ title, image, forTo, devices, price, key }) => {
         <p className={styles.productTitleShadow}>{title}</p>
         <div className={styles.productContainer}>
           <div className={styles.productImageContainer}>
-            <img
-              className={styles.productImage}
-              src={image}
-              alt="компьютер"
-            />
+            <img className={styles.productImage} src={image} alt="компьютер" />
           </div>
           <div className={styles.productStats}>
             <div className={styles.productStatsTitle}>Комплектующие</div>
@@ -110,10 +111,20 @@ const ProductsCard = ({ title, image, forTo, devices, price, key }) => {
             <div className={styles.productCredit}>
               <p className={styles.productCreditTitle}>В кредит/рассрочку</p>
               <p className={styles.productCreditPrice}>
-                ОТ {((formattedPrice / 100 * 15.5) + (formattedPrice / 12)).toFixed(0)} Р. В МЕСЯЦ
+                ОТ{" "}
+                {roundToNearest(
+                  ((formattedPrice / 100) * 15.5 + formattedPrice / 12).toFixed(
+                    0
+                  )
+                )}{" "}
+                Р. В МЕСЯЦ
               </p>
             </div>
-            <Button className={styles.productBuy} type="pink" onClick={() => saveOnLocalStorage(title)}>
+            <Button
+              className={styles.productBuy}
+              type="pink"
+              onClick={() => saveOnLocalStorage(title)}
+            >
               Купить
             </Button>
           </div>

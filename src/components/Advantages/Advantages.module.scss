@@ -31,6 +31,22 @@
   }
 }
 
+@-moz-document url-prefix() {
+  .advantages {
+    &::before {
+      content: "";
+      position: absolute;
+      right: 240px;
+      top: 361px;
+      width: 250px;
+      height: 250px;
+      background: #ffffff;
+      opacity: 0.2;
+      filter: blur(281px);
+    }
+  }
+}
+
 .advantagesItem {
   position: relative;
   max-width: 390px;
