@@ -108,18 +108,16 @@ const ProductsCard = ({ title, image, forTo, devices, price, key }) => {
               <div className={styles.productPrice}>{price}Р</div>
               <div className={styles.productPriceShadow}>{price}Р</div>
             </div>
-            <div className={styles.productCredit}>
+            <a className={styles.productCredit} href="#payment">
               <p className={styles.productCreditTitle}>В кредит/рассрочку</p>
               <p className={styles.productCreditPrice}>
                 ОТ{" "}
                 {roundToNearest(
-                  ((formattedPrice / 100) * 15.5 + formattedPrice / 12).toFixed(
-                    0
-                  )
+                  ((formattedPrice / 100) * 15.5 + formattedPrice) / 12
                 )}{" "}
                 Р. В МЕСЯЦ
               </p>
-            </div>
+            </a>
             <Button
               className={styles.productBuy}
               type="pink"

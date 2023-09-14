@@ -60,7 +60,7 @@ const Cases = () => {
             <div key={index} className={styles.casesItem}>
               <p className={classNames(styles.casesNameMobile, [styles.casesName])}>{item.name}</p>
               <div className={styles.casesLeft}>
-                <img src={item.img} alt="" />
+                <img className={styles.casesImage} src={item.img} alt="" />
                 <p className={styles.casesAdvant}>{item.adv}</p>
               </div>
               <div className={styles.casesRight}>

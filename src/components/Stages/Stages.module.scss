@@ -2,7 +2,7 @@
   margin-top: 100px;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: flex-start;
   height: 226px;
 }
 
@@ -12,13 +12,6 @@
   max-width: 340px;
   height: 154px;
   max-height: 154px;
-  font-family: "RS";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 25px;
-  text-align: center;
-  color: #ffffff;
   background: rgba(217, 217, 217, 0.01);
   background-size: 146px 295px;
   border: 1px solid #ffffff;
@@ -46,6 +39,19 @@
       transform: translate(64px, -50%);
     }
   }
+}
+
+.stepDesc {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-family: "RS";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+  text-align: center;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 1080px) {
@@ -83,6 +89,9 @@
         transform: translate(0px, -50%);
       }
     }
+  }
+  .stepDesc {
+    justify-content: center;
   }
 }
 

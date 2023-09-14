@@ -49,13 +49,13 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  width: 304px;
-    height: 304px;
+  width: 184px;
+  height: 168px;
   background: #ffffff;
   opacity: 1;
-  filter: blur(243px);
-  -webkit-filter: blur(243px);
-  -ms-filter: blur(243px);
+  filter: blur(171px);
+  -webkit-filter: blur(171px);
+  -ms-filter: blur(171px);
   // filter: url("data:image/svg+xml;utf9,<svg%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'><filter%20id='blur'><feGaussianBlur%20stdDeviation='3'%20/></filter></svg>#blur");
   filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='243'); 
 }
@@ -64,13 +64,13 @@ body {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 304px;
-    height: 304px;
+  width: 184px;
+  height: 168px;
   background: #ffffff;
   opacity: 1;
-  filter: blur(243px);
-  -webkit-filter: blur(243px);
-  -ms-filter: blur(243px);
+  filter: blur(171px);
+  -webkit-filter: blur(171px);
+  -ms-filter: blur(171px);
   // filter: url("data:image/svg+xml;utf9,<svg%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'><filter%20id='blur'><feGaussianBlur%20stdDeviation='3'%20/></filter></svg>#blur");
   filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='243'); 
 }

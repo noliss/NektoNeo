@@ -49,7 +49,7 @@ const Form = () => {
       email: "",
     });
     toast.success("Сообщение успешно отправлено!");
-    await fetch("/sendMail", {
+    await fetch("/sendMail/", {
       method: "POST",
       body: JSON.stringify({...form, product: localStoragePc}),
       headers: {

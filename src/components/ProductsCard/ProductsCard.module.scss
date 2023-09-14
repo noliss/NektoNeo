@@ -278,7 +278,10 @@
 }
 
 .productCredit {
+  display: block;
+  text-decoration: none;
   margin-top: 15px;
+  cursor: pointer;
 }
 
 .productCreditTitle {

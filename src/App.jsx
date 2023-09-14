@@ -123,6 +123,7 @@ const App = () => {
         whileInView={!isMobile ? 'visible': 'onlyVisible'}
         viewport={{ once: true }}
         className={styles.payment}
+        id="payment"
       >
         <div className={styles.container}>
           <Payment />
