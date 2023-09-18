@@ -12,72 +12,52 @@ const Services = () => {
       img: <ServiceIMG1 />,
       title: "ИНДИВИДУАЛЬАЯ СБОРКА",
       text: (
-        <p className={styles.serviceDescription}>
-          Подбор комплектующих под ваши пожелания
-          <br />
-          <br />
-          Продуманная установка комплектующих в корпус
-          <br />
-          <br />
-          Аккуратный кабель-менеджмент
-          <br />
-          <br />
-          Настройка BIOS
-          <br />
-          <br />
-          Стресс-тест системы после сборки
-        </p>
+        <div className={styles.serviceDescription}>
+          <div className={styles.serviceDescriptionLine}>Высокая мощность или компактность?</div>
+          <div className={styles.serviceDescriptionLine}><span>Соберем ПК лично под вас.</span></div>
+          <div className={styles.serviceDescriptionLine}><span>Никаких “паутин”</span> из проводов.</div>
+          <div className={styles.serviceDescriptionLine}><span>Обновим и настроим</span> BIOS</div>
+          <div className={styles.serviceDescriptionLine}><span>Стресс-тест</span> после сборки – отправим только рабочий ПК.</div>
+        </div>
       ),
     },
     {
       img: <ServiceIMG2 />,
       title: "РЕМОНТ",
       text: (
-        <p className={styles.serviceDescription}>
-          Диагностика устройства
-          <br />
-          <br />
-          Консультация по ремонту устройства
-          <br />
-          <br />
-          Замена комплектующих и устранение неисправностей вашего устройства
-          <br />
-          <br />
-          Рекомандации по дальнейшей эксплуатации
-        </p>
+        <div className={styles.serviceDescription}>
+          <div className={styles.serviceDescriptionLine}><span>Найдем</span> неисправность.</div>
+          <div className={styles.serviceDescriptionLine}><span>Обсудим</span> ремонт, стоимость и сроки.</div>
+          <div className={styles.serviceDescriptionLine}><span>Заменим</span> комплектующие и устраним неисправность.</div>
+          <div className={styles.serviceDescriptionLine}><span>Расскажем</span>, как продлить жизнь ПК.</div>
+        </div>
       ),
     },
     {
       img: <ServiceIMG3 />,
       title: "АПГРЕЙД",
+//       
+// 
+// 
+// 
       text: (
-        <p className={styles.serviceDescription}>
-          Оценка и анализ возможности апгрейда
-          <br />
-          <br />
-          Подбор комплектующих под ваш бюджет
-          <br />
-          <br />
-          Установка новых компонентов
-          <br />
-          <br />
-          Проверка работоспособности обновленного ПК
-        </p>
+        <div className={styles.serviceDescription}>
+          <div className={styles.serviceDescriptionLine}><span>Оценим</span> и проанализируем возможность апгрейда.</div>
+          <div className={styles.serviceDescriptionLine}><span>Подберем</span> оптимальные комплектующие под ваш бюджет</div>
+          <div className={styles.serviceDescriptionLine}><span>Установим</span> новые компоненты</div>
+          <div className={styles.serviceDescriptionLine}><span>Проверим</span> работоспособность улучшенного ПК</div>
+        </div>
       ),
     },
     {
       img: <ServiceIMG4 />,
       title: "ЛИЧНАЯ КОНСУЛЬТАЦИЯ",
       text: (
-        <p className={styles.serviceDescription}>
-          Предложим оптимальную конфигурацию компьютера
-          <br />
-          <br />
-          Предоставим профессиональную консультацию
-          <br />
-          <br />
-          Учтем вашу периферию и даже расположение вашего ПК
-        </p>
+        <div className={styles.serviceDescription}>
+          <div className={styles.serviceDescriptionLine}>Игры, а может монтаж? – <span>Учтем предпочтения</span> и предложим варианты.</div>
+          <div className={styles.serviceDescriptionLine}><span>Обсудим</span> цену, мощность, комплектующие – все.</div>
+          <div className={styles.serviceDescriptionLine}>Расположение ПК, периферия – <span>учтем все</span>.</div>
+        </div>
       ),
     },
   ];

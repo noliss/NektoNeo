@@ -9,8 +9,8 @@ const Footer = () => {
       <div className={styles.footerColumn}>
       <div className={styles.footerColumn}>
         <div className={styles.footerPhone}>
-        с 10:00 - 23:00 пн-пт
-        <p className={styles.footerPhoneItem}>+7(900)123-12-45</p>
+        с 10:00 - 22:00 пн-пт
+        <p className={styles.footerPhoneItem}>+7 (977)-877-77-84</p>
         Телефон для горячей линии
         </div>
       </div>

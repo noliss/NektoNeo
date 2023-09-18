@@ -9,7 +9,7 @@ const Stages = () => {
       <p className={styles.step}>
         <Step1SVG fill="#090808" className={styles.stepBackground} />
         <p className={styles.stepDesc}>
-          Оставьте заявку на сайте или позвоните нам.{" "}
+        Оставьте заявку на сайте или свяжитесь с нашим менеджером. {" "}
         </p>
       </p>
       <p className={styles.step}>

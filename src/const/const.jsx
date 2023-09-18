@@ -40,21 +40,21 @@ import vandguard2 from '../images/products/vanguard2.png'
 export const products = [
   {
     id: 1,
-    title: 'VA.PHOENIX',
+    title: 'VA PHOENIX',
     img: phoenix,
     devices: ['Ryzen 3 1200', 'GTX 1650', '16GB DDR4', '480GB', 'AG200', '400W'],
     price: '42.000',
   },
   {
     id: 2,
-    title: 'VA.ELECTRA',
+    title: 'VA ELECTRA',
     img: electra,
     devices: ['i3-10105F', 'GTX 1650', '16GB DDR4', '480GB', 'AG200', '400W'],
     price: '44.000',
   },
   {
     id: 3,
-    title: 'VA.ZEN',
+    title: 'VA ZEN',
     img: zen,
     devices: ['i3-12100f', 'GTX 1660', '16GB DDR4', '1TB', 'AG300', '500W'],
     price: '59.000',
@@ -215,7 +215,7 @@ export const products = [
   },
   {
     id: 26,
-    title: 'VA ELECT. R+',
+    title: 'VA ELECT R+',
     img: electraR,
     devices: ['Ryzen 5 5500', 'RTX 2060', '16GB DDR4', '512GB M2', 'SE-224-XTS', '600W'],
     price: '75.000',
@@ -236,7 +236,7 @@ export const products = [
   },
   {
     id: 29,
-    title: 'VA VANG. R',
+    title: 'VA VANG R',
     img: vanguardR,
     devices: ['Ryzen 5 5500', 'RTX 3060 TI', '32GB DDR4', '512GB M2', 'SE-224-XTS', '750W'],
     price: '90.500',
@@ -264,14 +264,14 @@ export const products = [
   },
   {
     id: 33,
-    title: 'VA SYN. X',
+    title: 'VA SYN X',
     img: synergyX,
     devices: ['I5-13600KF', 'RTX 4070 TI', '32GB DDR5', '2TB', 'L360', '750W'],
     price: '186.200',
   },
   {
     id: 34,
-    title: 'VA VANG. MINI',
+    title: 'VA VANG MINI',
     img: vandguardMini,
     devices: ['I5-12400f', 'RTX 3060 TI', '32GB DDR4', '512GB', 'L240', '750W'],
     price: '108.200',
@@ -292,7 +292,7 @@ export const products = [
   },
   {
     id: 37,
-    title: 'VA VANG. 2',
+    title: 'VA VANG 2',
     img: vandguard2,
     devices: ['I5-13400f', 'RTX 4070 TI', '32GB DDR4', '512GB M2', 'SE-224-XTS', '750W'],
     price: '149.700',

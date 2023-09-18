@@ -13,8 +13,9 @@
   max-width: 285px;
   width: 285px;
   max-height: 421px;
+  min-height: 421px;
   margin-top: 100px;
-  margin-right: 20px;
+  margin-right: 17px;
   padding: 0 22px 59px;
   z-index: -1;
   box-shadow: 0px 58.111610412597656px 45.659122467041016px -25.596782684326172px rgba(29, 32, 33, 0.64);
@@ -80,13 +81,12 @@
   align-items: center;
   font-family: "RS";
   font-style: normal;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 18px;
-  line-height: 18px;
+  line-height: 24px;
   text-align: center;
   margin-bottom: 18px;
   color: #ffffff;
-  margin-top: 27px;
   min-height: 45px;
 }
 
@@ -96,17 +96,31 @@
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
-  line-height: 14px;
-  text-align: center;
-
+  line-height: 18px;
+  min-width: 236px;
+  // text-align: center;
+  // letter-spacing: 0.6px;
   color: #ffffff;
 }
 
+.serviceDescriptionLine {
+  font-weight: 300;
+  font-family: "RS";
+  padding-bottom: 22px;
+  hyphens: auto;
+  span {
+    font-size: 14px;
+    font-family: "RS";
+    font-weight: 500;
+  }
+
+}
+
 .serviceImg {
-  width: 204px;
-  height: 204px;
-  min-width: 204px;
-  min-height: 204px;
+  width: 200px;
+  height: 160px;
+  min-width: 200px;
+  min-height: 160px;
   margin-top: -100px;
   margin-bottom: 14px;
 }

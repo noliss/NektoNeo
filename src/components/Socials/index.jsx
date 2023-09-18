@@ -47,7 +47,7 @@ const Socials = () => {
             target="_blank"
             aria-label={item.alt}
             href={item.link}
-            className={styles.socialsItem}
+            className={styles.socialsItem} rel="noreferrer"
           >
             {item.img}
             <div className={styles.socialItemDesc}>{item.desc}</div>

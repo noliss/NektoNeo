@@ -10,14 +10,13 @@ const Gifts = () => {
         <div className={styles.giftsLeft}>
           <ul className={styles.giftsList}>
             <li className={styles.giftsListItem}>
-              1. Фирменную гарантию на сборку на год от VA-PC
+              1. Фирменную гарантию на компьютер от VA-PC
             </li>
             <li className={styles.giftsListItem}>
-              2. Фирменный коврик для мышки
+              2. Чек и коробки от комплектующих
             </li>
-            <li className={styles.giftsListItem}>3. Фирменный стикерпак</li>
             <li className={styles.giftsListItem}>
-              4. Личное письмо от всей команды VA-PC
+              3. Личное письмо от всей команды VA-PC
             </li>
           </ul>
           <p className={styles.giftsDesc}>
