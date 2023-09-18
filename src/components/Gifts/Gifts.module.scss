@@ -3,6 +3,7 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background: linear-gradient(
     180deg,
     rgba(22, 22, 22, 0.322) 0%,
@@ -12,8 +13,14 @@
   backdrop-filter: blur(86px);
   /* Note: backdrop-filter has minimal browser support */
   margin-top: 44px;
-  padding: 53px 70px;
+  padding: 66px 70px;
   border-radius: 33.7033px;
+
+  img {
+    margin-top: -40px;
+    width: 240px;
+    // object-fit: cover;
+  }
 
   &::before {
     transition: all 0.2s;

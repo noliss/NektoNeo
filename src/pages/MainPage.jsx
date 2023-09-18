@@ -107,7 +107,7 @@ return (
           <Typography
             className={styles.productsTypography}
             type="h2"
-            text="ЛУЧШЕЕ РЕШЕНИЕ ДЛЯ"
+            text="ЛУЧШЕЕ РЕШЕНИЕ ДЛЯ ВАС"
           />
           <Products />
         </div>
