@@ -7,7 +7,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom'
 import MainPage from './pages/MainPage';
-import Admin from './pages/Admin';
+import AdminAuth from './pages/AdminAuth';
+import NotFound from "./pages/NotFound";
 
 
 const App = () => {
@@ -17,10 +18,10 @@ const App = () => {
       <Router>
         <Routes>
           <Route exact path="/" element={<MainPage/>}/>
-          <Route exact path="/admin" element={<Admin/>}/>
+          <Route exact path="/admin" element={<AdminAuth/>}/>
           <Route
               path="*"
-              element={<Navigate to="/" replace />}
+              element={<NotFound />}
           />
         </Routes>
     </Router>
