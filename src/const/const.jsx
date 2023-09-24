@@ -215,7 +215,7 @@ export const products = [
   },
   {
     id: 26,
-    title: 'VA ELECT R+',
+    title: 'VA FURY',
     img: electraR,
     devices: ['Ryzen 5 5500', 'RTX 2060', '16GB DDR4', '512GB M2', 'SE-224-XTS', '600W'],
     price: '75.000',
@@ -236,7 +236,7 @@ export const products = [
   },
   {
     id: 29,
-    title: 'VA VANG R',
+    title: 'VA RAPTOR',
     img: vanguardR,
     devices: ['Ryzen 5 5500', 'RTX 3060 TI', '32GB DDR4', '512GB M2', 'SE-224-XTS', '750W'],
     price: '90.500',
@@ -264,14 +264,14 @@ export const products = [
   },
   {
     id: 33,
-    title: 'VA SYN X',
+    title: 'VA IMPACT',
     img: synergyX,
     devices: ['I5-13600KF', 'RTX 4070 TI', '32GB DDR5', '2TB', 'L360', '750W'],
     price: '186.200',
   },
   {
     id: 34,
-    title: 'VA VANG MINI',
+    title: 'VA FROST',
     img: vandguardMini,
     devices: ['I5-12400f', 'RTX 3060 TI', '32GB DDR4', '512GB', 'L240', '750W'],
     price: '108.200',
@@ -292,7 +292,7 @@ export const products = [
   },
   {
     id: 37,
-    title: 'VA VANG 2',
+    title: 'VA PRIME',
     img: vandguard2,
     devices: ['I5-13400f', 'RTX 4070 TI', '32GB DDR4', '512GB M2', 'SE-224-XTS', '750W'],
     price: '149.700',

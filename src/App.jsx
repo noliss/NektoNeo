@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import MainPage from './pages/MainPage';
 import AdminAuth from './pages/AdminAuth';
 import NotFound from "./pages/NotFound";
+import AdminPanel from "./pages/AdminPanel";
 
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
         <Routes>
           <Route exact path="/" element={<MainPage/>}/>
           <Route exact path="/admin" element={<AdminAuth/>}/>
+          <Route exact path="/admin-panel" element={<AdminPanel/>} />
           <Route
               path="*"
               element={<NotFound />}
