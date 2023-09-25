@@ -24,8 +24,10 @@ const AdminAuth = () => {
         'Content-Type': 'application/json'
       }
     }).then((response) => {
-      toast("Авторизация прошла успешно!")
-      navigate('/admin-panel')
+      if (response.status === 200) {
+        toast("Авторизация прошла успешно!")
+        return navigate('/admin-panel')
+      }
     })
   }
   return (

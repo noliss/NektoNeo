@@ -93,16 +93,14 @@ const AdminPanel = (props) => {
   ]
 
   useEffect(() => {
-    return () => {
-      fetch(/isAuth/).then((response) => {
-        console.log(response);
-        if (response.status === 401) {
-          return navigate('/admin')
-        }
-        getProductsData()
-      })
-    }
-  }, [])
+    fetch(/isAuth/).then((response) => {
+      console.log(response);
+      if (response.status !== 401 && response.status !== 500) {
+        return getProductsData()
+      }
+      return navigate('/admin')
+    })
+  }, [navigate])
 
   const deleteProductById = (id, title) => {
     fetch(/deleteProduct/, {
