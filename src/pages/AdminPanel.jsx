@@ -1,8 +1,6 @@
-import { Navigate, useNavigate } from "react-router-dom";
-import { useEffect, useState, useRef } from "react";
-import { DataGrid, useGridApiContext  } from '@mui/x-data-grid';
+import { useState, useRef, useEffect } from "react";
+import { DataGrid  } from '@mui/x-data-grid';
 import styles from './AdminPanel.module.scss';
-import { products } from "../const/const";
 import Button from "../components/Button";
 import DeleteIcon from '@mui/icons-material/Delete';
 import { toast } from "react-toastify";
@@ -11,6 +9,7 @@ import Modal from '@mui/material/Modal';
 import formStyles from '../components/Form/Form.module.scss'
 import classNames from "classnames";
 import CloseIcon from '@mui/icons-material/Close';
+import AdminHeader from "../components/AdminHeader";
 
 const AdminPanel = (props) => {
   const [rows, updateRows] = useState([]);
@@ -26,7 +25,9 @@ const AdminPanel = (props) => {
     },
   })
   const dataGridRef = useRef(null);
-  const navigate = useNavigate();
+  useEffect(() => {
+    getProductsData()
+  }, [])
   const columns = [
     { 
       field: 'id', 
@@ -91,16 +92,6 @@ const AdminPanel = (props) => {
       />
     }
   ]
-
-  useEffect(() => {
-    fetch(/isAuth/).then((response) => {
-      console.log(response);
-      if (response.status !== 401 && response.status !== 500) {
-        return getProductsData()
-      }
-      return navigate('/admin')
-    })
-  }, [navigate])
 
   const deleteProductById = (id, title) => {
     fetch(/deleteProduct/, {
@@ -179,8 +170,6 @@ const AdminPanel = (props) => {
     const reader = new FileReader();
       reader.onload = function(event) {
         const previewUrlImg = event.target.result;
-        console.log(previewUrlImg);
-        console.log(img);
         setForm({
           ...form,
           image: {
@@ -189,7 +178,6 @@ const AdminPanel = (props) => {
           }
         })
       };
-      console.log(form);
       return reader.readAsDataURL(img);
   }
 
@@ -271,6 +259,7 @@ const AdminPanel = (props) => {
   return (
     // Возвращение элемента JSX, когда auth равен true
     <div>
+      <AdminHeader />
       <div className={styles.buttonSection}>
         <Button 
         // onClick={() => saveProducts()} 
