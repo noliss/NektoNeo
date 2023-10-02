@@ -100,7 +100,7 @@ return (
       initial={!isMobile ? 'hidden': 'onlyVisible'}
       whileInView={!isMobile ? 'visible': 'onlyVisible'}
       viewport={{ once: true }}
-      id="prod"
+      id="products"
       className={styles.products}
     >
       <Animate play start={{ opacity: 0 }} end={{ opacity: 1 }}>
@@ -185,6 +185,7 @@ return (
       whileInView={!isMobile ? 'visible': 'onlyVisible'}
       viewport={{ once: true }}
       className={styles.social}
+      id="socials"
     >
       <div className={styles.container}>
         <Typography

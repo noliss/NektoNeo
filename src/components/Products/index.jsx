@@ -27,16 +27,16 @@ const Products = () => {
 
   const selectedFilter = useCallback((price) => {
     setShowProducts(false)
-    if (price.minPrice === "all" && price.maxPrice === "all") {
+    if (price.filterFrom === "Все" && price.filterTo === "Все") {
       return setFilteredProducts([...products]);
     }
 
-    const formattedMinPrice = parseInt(price.minPrice.replace(".", ""));
-    const formattedMaxPrice = parseInt(price.maxPrice.replace(".", ""));
+    const formattedfilterFrom = parseInt(price.filterFrom?.replace(".", ""));
+    const formattedfilterTo = parseInt(price.filterTo?.replace(".", ""));
     return setFilteredProducts(
       products.filter((item) => {
         const itemPrice = parseInt(item.price.replace(".", ""));
-        return itemPrice >= formattedMinPrice && itemPrice <= formattedMaxPrice;
+        return itemPrice >= formattedfilterFrom && itemPrice <= formattedfilterTo;
       })
     );
   }, [products]);

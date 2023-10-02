@@ -13,7 +13,7 @@ export const Header = () => {
   const menuItems = [
     { name: "Главная", link: "#main" },
     { name: "Услуги", link: "#adv" },
-    { name: "Сборки", link: "#prod" },
+    { name: "Сборки", link: "#products" },
     { name: "Отзывы", link: "#rev" },
   ];
 

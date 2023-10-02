@@ -20,11 +20,20 @@
   border-radius: 31.5px;
   z-index: 15;
   img {
+    width: 100%;
     position: relative;
     padding: 5px;
     max-height: 337px;
     z-index: 1;
     overflow: hidden;
+  }
+  a {
+    width: 100%;
+    margin: 0;
+    display: block;
+    outline: none;
+    user-select: none;
+    border: none;
   }
   &::after {
     content: "";

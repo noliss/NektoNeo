@@ -4,75 +4,58 @@ import classNames from "classnames";
 
 const ProductsFilters = ({ onClick }) => {
   const [price, setPrice] = useState({
-    minPrice: "all",
-    maxPrice: "all",
+    filterFrom: "Все",
+    filterTo: "Все",
   });
+
+  const [filters, updateFilters] = useState([]);
 
   useEffect(() => {
     onClick({
-      minPrice: price.minPrice,
-      maxPrice: price.maxPrice,
+      filterFrom: price.filterFrom,
+      filterTo: price.filterTo,
     });
-  }, [price.minPrice, price.maxPrice]);
+  }, [price.filterFrom, price.filterTo]);
 
-  const rangePrice = [
-    {
-      minPrice: "all",
-      maxPrice: "all",
-      title: "Все",
-    },
-    {
-      minPrice: "42.000",
-      maxPrice: "100.000",
-      title: "42.000р - 100.000р",
-    },
-    {
-      minPrice: "100.000",
-      maxPrice: "150.000",
-      title: "100.000р - 150.000р",
-    },
-    {
-      minPrice: "150.000",
-      maxPrice: "200.000",
-      title: "150.000р - 200.000р",
-    },
-    {
-      minPrice: "200.000",
-      maxPrice: "250.000",
-      title: "200.000р - 250.000р",
-    },
-    {
-      minPrice: "250.000",
-      maxPrice: "325.000",
-      title: "250.000р - 325.000р",
-    },
-    {
-      minPrice: "325.000",
-      maxPrice: "500.000",
-      title: "325.000р - 500.000р",
-    },
-  ];
+  useEffect(() => {
+    getFiltersData()
+  }, [])
+
+  const getFiltersData = async () => {
+    await fetch('/getFilters/').then( async (response) => {
+      let json = await response.json();
+      updateFilters([
+        {
+          filterFrom: "Все",
+          filterTo: "Все",
+          id: 9999999
+        },
+        ...json,
+      ].sort((a, b) => a.filterFrom - b.filterTo))
+    })
+  }
+
   return (
     <div className={styles.productsFilters}>
       <div className={styles.productsFilterPrice}>
         <div className={styles.productFilterMobileTitle}>Цена</div>
-        {rangePrice.map((item) => {
+        {filters.map((item) => {
           return (
             <div
               onClick={() =>
                 setPrice({
-                  minPrice: item.minPrice,
-                  maxPrice: item.maxPrice,
+                  filterFrom: item.filterFrom,
+                  filterTo: item.filterTo,
                 })
               }
-              key={item.price}
+              key={item.id}
               className={classNames(styles.productsFilterPriceItem, {
                 [styles.productsFilterPriceItemActive]:
-                  price.minPrice === item.minPrice &&
-                  price.maxPrice === item.maxPrice,
+                  price.filterFrom === item.filterFrom &&
+                  price.filterTo === item.filterTo,
               })}
             >
-              {item.title}
+              {item.filterFrom !== 'Все' ? `${item.filterFrom}р - ${item.filterTo}р` : 'Все'}
             </div>
           );
         })}
