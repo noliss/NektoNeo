@@ -48,8 +48,8 @@ const ProductsFilters = ({ onClick }) => {
     },
     {
       minPrice: "325.000",
-      maxPrice: "450.000",
-      title: "325.000р - 450.000р",
+      maxPrice: "500.000",
+      title: "325.000р - 500.000р",
     },
   ];
   return (
