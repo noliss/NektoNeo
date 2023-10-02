@@ -12,7 +12,6 @@ import { goToLink } from "../../helpers/helpers";
 const ProductsCard = ({ title, image, forTo, devices, price, key }) => {
   const formattedPrice = parseInt(price.replace(".", ""));
   const saveOnLocalStorage = (title) => {
-    console.log(title);
     localStorage.setItem("PC", title);
     goToLink("#form", "_self");
   };
@@ -68,19 +67,19 @@ const ProductsCard = ({ title, image, forTo, devices, price, key }) => {
                   <div className={styles.productStatsIcon}>
                     <CpuSVG width="22" height="22" />
                   </div>
-                  <p>{devices[0]}</p>
+                  <p>{devices.split(',')[0]}</p>
                 </div>
                 <div className={styles.productStatsItem}>
                   <div className={styles.productStatsIcon}>
                     <GpuSVG width="21" height="21" />
                   </div>
-                  <p>{devices[1]}</p>
+                  <p>{devices.split(',')[1]}</p>
                 </div>
                 <div className={styles.productStatsItem}>
                   <div className={styles.productStatsIcon}>
                     <RamSVG width="22" height="22" />
                   </div>
-                  <p>{devices[2]}</p>
+                  <p>{devices.split(',')[2]}</p>
                 </div>
               </div>
               <div className={styles.productStatsColumn}>
@@ -88,19 +87,19 @@ const ProductsCard = ({ title, image, forTo, devices, price, key }) => {
                   <div className={styles.productStatsIcon}>
                     <DiskSVG width="15" height="20" />
                   </div>
-                  <p>{devices[3]}</p>
+                  <p>{devices.split(',')[3]}</p>
                 </div>
                 <div className={styles.productStatsItem}>
                   <div className={styles.productStatsIcon}>
                     <CoolSVG width="19" height="19" />
                   </div>
-                  <p>{devices[4]}</p>
+                  <p>{devices.split(',')[4]}</p>
                 </div>
                 <div className={styles.productStatsItem}>
                   <div className={styles.productStatsIcon}>
                     <WaltSVG width="17" height="17" />
                   </div>
-                  <p>{devices[5]}</p>
+                  <p>{devices.split(',')[5]}</p>
                 </div>
               </div>
             </div>

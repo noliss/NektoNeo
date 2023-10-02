@@ -82,8 +82,8 @@ const AdminPanelFilters = () => {
       })
     })
     .then(response => {
-      console.log('Баннер удалён: ', response);
-      toast(`Баннер ${id} удален`, {
+      console.log('Фильтр удалён: ', response);
+      toast(`Фильтр ${id} удален`, {
         type: 'success'
       })
       getFiltersData()
@@ -92,7 +92,7 @@ const AdminPanelFilters = () => {
       toast('Что-то пошло не так', {
         type: 'error'
       })
-      console.error('Ошибка при удалении баннера: ', error);
+      console.error('Ошибка при удалении фильтра: ', error);
     });
   }
 
@@ -125,7 +125,7 @@ const AdminPanelFilters = () => {
       <Button 
         onClick={() => showModal(true)} 
         className={styles.button}>
-          Добавить новый баннер
+          Добавить новый фильтр
       </Button>
     </div>
     <DataGrid

@@ -42,6 +42,7 @@ const defaultBlockAnimation = {
     opacity: 1,
   }
 }
+
 return (
   <div className={styles.main}>
     <motion.section

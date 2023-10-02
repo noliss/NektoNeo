@@ -240,7 +240,7 @@ const AdminPanelBanners = () => {
               Загрузить изображение
               <input id="download" hidden type="file" onChange={(e) => uploadImageForNewTitle(e.target.files[0])} />
           </label>
-          <Button onClick={addNewBanner} className={styles.modalButton}>Сохранить сборку</Button>
+          <Button onClick={addNewBanner} className={styles.modalButton}>Сохранить баннер</Button>
         </div>
       </Modal>
     </div>
