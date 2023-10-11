@@ -18,6 +18,7 @@ import miniCross from "../images/backgrounds/miniCross.svg";
 import { motion } from "framer-motion";
 import { Header } from "../components/Header";
 import { Animate, AnimateKeyframes, AnimateGroup } from "react-simple-animate";
+import { YMInitializer } from 'react-yandex-metrika';
 
 const MainPage = () => {
 
@@ -45,6 +46,11 @@ const defaultBlockAnimation = {
 
 return (
   <div className={styles.main}>
+    <YMInitializer accounts={[95153753]} options={{
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true
+    }} />
     <motion.section
       variants={defaultBlockAnimation}
       initial={!isMobile ? 'hidden' : 'onlyVisible'}
