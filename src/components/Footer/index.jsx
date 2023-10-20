@@ -2,17 +2,29 @@ import styles from "./Footer.module.scss";
 import logo from '../../images/svg/logo.svg'
 import policy from '../../files/policy.pdf';
 import offerta from '../../files/offerta.pdf'
+import Button from "../Button";
+import { goToLink } from "../../helpers/helpers";
 
 const Footer = () => {
   return (
     <div className={styles.footer}>
       <div className={styles.footerColumn}>
-      <div className={styles.footerColumn}>
-        <div className={styles.footerPhone}>
+      <Button
+        className={styles.headerButton}
+        onClick={() => {
+          goToLink("https://t.me/vapc_m");
+        }}
+      >
+        Связь с менеджером
+      </Button>
+      <div className={styles.footerPhone}>
+        с 10:00 - 22:00 пн-пт
+      </div>
+        {/* <div className={styles.footerPhone}>
         с 10:00 - 22:00 пн-пт
         <p className={styles.footerPhoneItem}>+7 (977)-877-77-84</p>
         Телефон для горячей линии
-        </div>
+        </div> */}
       </div>
         {/* <p className={styles.footerData}>
           Москва, метро Румянцево, БП <br /><br /> Румянцево, корпус Е, вход 12, офис 3
@@ -20,7 +32,6 @@ const Footer = () => {
         <p className={styles.footerData}>
           ИНН: 77123123722680<br /><br /> ОГРНИП: 123123123123
         </p> */}
-      </div>
       <div className={styles.footerColumn}>
         <img src={logo} alt="логотип" className={styles.footerLogo} />
       </div>

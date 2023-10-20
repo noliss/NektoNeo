@@ -49,8 +49,11 @@ return (
     <YMInitializer accounts={[95153753]} options={{
       clickmap: true,
       trackLinks: true,
-      accurateTrackBounce: true
-    }} />
+      accurateTrackBounce: true,
+      webvisor: true
+    }}
+      version="2"
+    />
     <motion.section
       variants={defaultBlockAnimation}
       initial={!isMobile ? 'hidden' : 'onlyVisible'}

@@ -24,6 +24,9 @@
 }
 
 .footerColumn {
+  &:first-child {
+    margin-top: 100px;
+  }
   &:nth-child(2) {
     position: relative;
     width: 27%;
@@ -50,7 +53,7 @@
 }
 
 .footerPhone {
-  margin-top: 85px;
+  margin-top: 20px;
   font-family: "RS";
   font-style: normal;
   font-weight: 400;
@@ -58,7 +61,7 @@
   line-height: 25px;
   /* or 147% */
 
-  text-align: left;
+  text-align: center;
 
   /* White */
 
